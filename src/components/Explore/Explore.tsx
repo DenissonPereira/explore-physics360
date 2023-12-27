@@ -9,6 +9,7 @@ import './Explore.sass'
 const Explore = () => {
 
   const titulo = 'Explore mais';
+  const descricao = 'calculadoras para integrais, finanças, matrizes e muito mais';
 
   return (
     <div className="explorar">
@@ -33,7 +34,7 @@ const Explore = () => {
         </div>
         <div className="calculadoras_explorar">
             <h2>Calculadoras</h2>
-            <p>Calculadoras para integrais, finanças, matrizes e muito mais</p>
+            <p>{descricao}</p>
           </div>
       </div>
     </div>

@@ -1,0 +1,47 @@
+@use '../../sass/variables.sass'
+@use '../../sass/mixins.sass'
+@use '../../sass/fonts.sass'
+    
+.principais
+    @include mixins.remover_margens
+    display: flex
+    flex-direction: column
+    background-color: variables.$cor-de-fundo
+    text-align: center
+
+.titulo
+    margin-top: 3em
+    font-size: 2em
+    color: variables.$cor-vermelho-texto
+
+.phy
+    font-family: 'Chocolate'
+    font-size: 1.5em
+    color: variables.$cor-azul-texto
+    text-shadow: 2px 2px 2px black
+
+.principal
+    @include mixins.remover_margens
+    background-color: variables.$cor-de-fundo
+    display: flex
+    flex-direction: row
+    justify-content: center
+    justify-items: center
+    align-content: center
+    align-items: center
+
+.cartao
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 2em
+    width: 25em
+    p
+        color: black
+        text-align: center
+        width: 19em
+
+.atomo
+    img
+        width: 4em
+        border-radius: .2em

@@ -27,3 +27,18 @@
 
 .atomo
     font-size: 5em
+    text-shadow: 2px 2px white
+    color: variables.$cor-vermelho-texto
+    svg
+        animation: acender 10s infinite
+
+    @keyframes acender
+        0%
+            filter: drop-shadow(6px 2px 2px white)
+            color: variables.$cor-vermelho-texto
+        50%
+            filter: drop-shadow(6px 2px 2px white)
+            color: white
+        100%
+            filter: drop-shadow(6px 2px 2px white)
+            color: variables.$cor-vermelho-texto

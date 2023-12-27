@@ -1,9 +1,10 @@
 import Navbar from "../../components/layout/Navbar/Navbar"
 
+import './Home.sass'
 
 const Home = () => {
   return (
-    <div>
+    <div className="home">
       <Navbar />
       Home
     </div>

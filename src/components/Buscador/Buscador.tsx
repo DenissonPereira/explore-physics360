@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import palavrasChaves from '../../../scripts/palavras';
+import palavrasChaves from '../../scripts/palavras';
 import './Buscador.sass';
 import './BuscadorResponsivo.sass';
 

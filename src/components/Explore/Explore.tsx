@@ -8,6 +8,7 @@ import './Explore.sass'
 
 const Explore = () => {
 
+
   const titulo = 'Explore mais';
   const descricao = 'calculadoras para integrais, finanças, matrizes e muito mais';
 

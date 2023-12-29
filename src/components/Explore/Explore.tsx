@@ -10,7 +10,7 @@ const Explore = () => {
 
 
   const titulo = 'Explore mais';
-  const descricao = 'calculadoras para integrais, finanças, matrizes e muito mais';
+  const descricao = 'Calculadoras para integrais, finanças, matrizes e muito mais';
 
   return (
     <div className="explorar">

@@ -1,30 +1,87 @@
-# React + TypeScript + Vite
+# 🧪 Explore Physics 360
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# 🔍 Explore a Aplicação em Funcionamento
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Convidamos você a explorar a aplicação **"Explore Physics 360"** em sua versão online: 
 
-## Expanding the ESLint configuration
+[![NPM](https://img.shields.io/badge/Clique%20Aqui-8A2BE2)](https://denissonpereira.github.io/explore-physics360/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# 📑 Sobre o projeto 
 
-- Configure the top-level `parserOptions` property like this:
+O site **Explore Physics 360** é uma iniciativa apaixonada e dedicada, desenvolvida por entusiastas comprometidos com a educação em *física* e *matemática*. Importante esclarecer que este projeto não tem vínculo oficial com instituições educacionais ou entidades relacionadas. As calculadoras presentes no site foram criadas originalmente para proporcionar aos estudantes uma ferramenta interativa e educativa, visando facilitar cálculos complexos em *física* e *matemática*. Este recurso busca enriquecer a experiência de aprendizado, oferecendo uma abordagem prática e acessível para explorar conceitos dessas disciplinas.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## 📸 Visuals and Screenshots
+
+Dê uma espiada nas imagens abaixo para ter uma prévia visual do projeto em ação. As capturas de tela oferecem um vislumbre das principais características e do design envolvente.
+
+### 💻 Layout web
+![Web 1](./public/web1.png) 
+
+![Web 2](./public/web2.png) 
+
+### 📱 Layout mobile
+![Mobile 1](./public/mob1.jpg) ![Mobile 2](./public/mob2.jpg)
+
+## 📚 Stack Tecnológica
+
+[![Badge](https://img.shields.io/badge/Vite%20-%238A2BE2?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Badge](https://img.shields.io/badge/ReactJs-v18.2.0-blue?style=flat&logo=react&logoColor=white)](https://react.dev/)
+[![Badge](https://img.shields.io/badge/React%20Router-6.20.0-%238A2BE2?style=flat&logo=react-router&logoColor=white)](https://reactrouter.com/)
+[![Badge](https://img.shields.io/badge/Icons-v4.2.0-hotpink?style=flat&logo=react&logoColor=white)](https://react-icons.github.io/react-icons/)
+[![Badge](https://img.shields.io/badge/HTML-orange?style=flat&logo=html5&logoColor=white)](https://www.w3.org/html/)
+[![Badge](https://img.shields.io/badge/Sass-purple?style=flat&logo=sass&logoColor=white)](https://sass-lang.com/)
+[![Badge](https://img.shields.io/badge/Less-blue?style=flat&logo=less&logoColor=white)](http://lesscss.org/)
+[![Badge](https://img.shields.io/badge/TypeScript-blue?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Badge](https://img.shields.io/badge/Node.js-v21.4.0-green?style=flat&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Badge](https://img.shields.io/badge/React_Bootstrap-v2.9.1-purple?style=flat&logo=bootstrap&logoColor=white)](https://react-bootstrap.netlify.app/)
+
+
+## 🌐 Implantação em produção
+
+- Web: `GitHub Pages`
+
+# 🚀 Como executar o projeto 🚀
+
+## ⚙ Pré-requisitos
+
+Você precisa ter o npm instalado em seu computador. O npm está disponível com o NodeJS, e para baixá-lo, basta clicar no link abaixo:
+
+[![NPM](https://img.shields.io/npm/v/npm.svg?logo=npm)](https://nodejs.org/en) 
+
+Após instalar o npm, instale as dependências do projeto com o seguinte comando no seu terminal:
+
+```
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## ✨ Tudo pronto! ✨
+
+Agora basta executar o projeto com o comando:
+
+```
+npm run dev
+```
+
+Aguarde a conclusão da compilação e vá para http://localhost:5173/Cifra-Magica após o término da compilação.
+
+## 🚨 Aguarde! Ainda não terminou!
+
+>O projeto está atualmente em desenvolvimento, e é importante ressaltar que este site não representa uma entidade real associada ao universo de Yu-Gi-Oh! É uma iniciativa independente criada por entusiastas da comunidade, dedicada a fornecer uma plataforma aberta para todos os interessados em cards de Yu-Gi-Oh!
+
+>Queremos destacar que qualquer pessoa está livre para usar e participar deste projeto. Não há restrições de acesso ou contribuição. Seja você um jogador casual, um colecionador ávido ou um desenvolvedor apaixonado, todos são bem-vindos para colaborar, compartilhar ideias e contribuir para o crescimento coletivo do nosso espaço dedicado aos cards de Yu-Gi-Oh!
+
+## 📜 Licença
+
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/DenissonPereira/yugioh-cards/blob/main/LICENSE) 
+
+## ✏️ Autor 
+
+Denisson Pereira Santos
+
+<div> 
+<a href="https://www.linkedin.com/in/denisson-pereira" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"  target="_blank"></a> 
+<a href="https://denissonpereira.com" target="_blank"><img src="https://img.shields.io/badge/Meu%20Site-%2333cc33?style=for-the-badge&logo=fontawesome&logoColor=white&logoWidth=15&labelColor=black"  target="_blank"></a> 
+<a href="https://github.com/DenissonPereira" target="_blank"><img src="https://img.shields.io/badge/GitHub-%23181717?style=for-the-badge&logo=github&logoColor=white&logoWidth=15&labelColor=black"  target="_blank"></a> 
+<a href="https://www.instagram.com/denisson_pereira1?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
+</div>&nbsp;&nbsp;

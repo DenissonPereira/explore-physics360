@@ -6,6 +6,7 @@ import Explore from "../../components/Explore/Explore"
 import Footer2 from "../../components/layout/Footer2/Footer2"
 
 import './Home.sass'
+import './Home.less'
 
 
 

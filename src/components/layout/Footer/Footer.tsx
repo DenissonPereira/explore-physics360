@@ -30,10 +30,10 @@ const Footer = () => {
       <div className="footer3">
         <h1>Siga-nos</h1>
         <div className="redes">
-          <div className="insta"><FaInstagram /></div>
-          <div className="link"><AiOutlineLinkedin /></div>
-          <div className="git"><FaGithub /></div>
-          <div className="face"><AiOutlineFacebook /></div>
+          <div className="insta" title="Instagram"><FaInstagram /></div>
+          <div className="link" title="LinkedIn"><AiOutlineLinkedin /></div>
+          <div className="git" title="GitHub"><FaGithub /></div>
+          <div className="face" title="Facebook"><AiOutlineFacebook /></div>
                 </div>
         </div>
     </div>

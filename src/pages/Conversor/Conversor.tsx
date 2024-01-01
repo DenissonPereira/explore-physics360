@@ -1,3 +1,4 @@
+import Energia from '../../calculadoras/Energia/Energia'
 import Temperatura from '../../calculadoras/Temperatura/Temperatura'
 import Velocidade from '../../calculadoras/Velocidade/Velocidade'
 import NavbarPesquisar from '../../common/navbarPesquisar/NavbarPesquisar'
@@ -9,6 +10,7 @@ const Conversor = () => {
         <NavbarPesquisar />
         <Velocidade />
         <Temperatura />
+        <Energia />
     </div>
   )
 }

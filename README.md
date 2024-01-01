@@ -1,4 +1,4 @@
-# 🧪 Explore Physics 360
+# 📗  Explore Physics 360
 
 
 # 🔍 Explore a Aplicação em Funcionamento

@@ -63,17 +63,17 @@ Agora basta executar o projeto com o comando:
 npm run dev
 ```
 
-Aguarde a conclusão da compilação e vá para http://localhost:5173/Cifra-Magica após o término da compilação.
+Aguarde a conclusão da compilação e vá para http://localhost:5173/explore-physics360/ após o término da compilação.
 
 ## 🚨 Aguarde! Ainda não terminou!
 
->O projeto está atualmente em desenvolvimento, e é importante ressaltar que este site não representa uma entidade real associada ao universo de Yu-Gi-Oh! É uma iniciativa independente criada por entusiastas da comunidade, dedicada a fornecer uma plataforma aberta para todos os interessados em cards de Yu-Gi-Oh!
+>Ao adotar uma abordagem de código aberto, buscamos criar uma plataforma inclusiva, onde diversas perspectivas e habilidades possam se unir para enriquecer ainda mais a experiência de aprendizado oferecida pelo Explore Physics 360. Queremos construir uma comunidade vibrante que compartilhe o compromisso com a educação e a disseminação do conhecimento científico.
 
->Queremos destacar que qualquer pessoa está livre para usar e participar deste projeto. Não há restrições de acesso ou contribuição. Seja você um jogador casual, um colecionador ávido ou um desenvolvedor apaixonado, todos são bem-vindos para colaborar, compartilhar ideias e contribuir para o crescimento coletivo do nosso espaço dedicado aos cards de Yu-Gi-Oh!
+>Se você é apaixonado por física, matemática ou programação, convidamos você a explorar o código-fonte do projeto em nosso repositório no GitHub e contribuir de maneira ativa para melhorar e expandir as funcionalidades do Explore Physics 360. Juntos, podemos criar uma ferramenta ainda mais poderosa e acessível para estudantes de todas as partes do mundo.
 
 ## 📜 Licença
 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/DenissonPereira/yugioh-cards/blob/main/LICENSE) 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/DenissonPereira/explore-physics360/blob/main/LICENSE) 
 
 ## ✏️ Autor 
 

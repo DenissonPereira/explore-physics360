@@ -24,7 +24,7 @@ function NavScrollExample() {
             navbarScroll
           >
             <Nav.Link as={Link} to="/">HOME</Nav.Link>
-            <Nav.Link as={Link} to="/">CARDS</Nav.Link>
+            <Nav.Link as={Link} to="/conversor">CONVERSOR</Nav.Link>
             <Nav.Link as={Link} to="/">NEWS</Nav.Link>
             <Nav.Link as={Link} to="/about">ABOUT</Nav.Link>
           </Nav>

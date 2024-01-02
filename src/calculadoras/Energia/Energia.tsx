@@ -1,5 +1,6 @@
 import { ChangeEvent, useState } from 'react'
 import './Energia.less'
+import './EnergiaResponsivo.sass'
 
 const Energia = () => {
 

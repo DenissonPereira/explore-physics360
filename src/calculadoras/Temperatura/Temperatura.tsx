@@ -1,5 +1,7 @@
 import { useState, ChangeEvent } from 'react'
+
 import './Temperatura.less'
+import './TemperaturaResponsivo.sass'
 
 const Temperatura = () => {
 

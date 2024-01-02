@@ -5,6 +5,7 @@ import { TbMath } from "react-icons/tb"
 import { TbMathIntegrals } from "react-icons/tb"
 
 import './Explore.sass'
+import './ExploreResponsivo.sass'
 
 const Explore = () => {
 

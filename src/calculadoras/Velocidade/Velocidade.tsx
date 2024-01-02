@@ -1,6 +1,7 @@
 import { useState, ChangeEvent } from 'react';
 
 import './Velocidade.less'
+import './VelocidadeResponsivo.sass'
 
 const Velocidade = () => {
     const [valor_ms, setValor] = useState<string>('');

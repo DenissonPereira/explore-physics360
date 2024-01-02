@@ -5,6 +5,7 @@ import { AiOutlineFacebook } from "react-icons/ai";
 
 import Navfooter from '../../../common/navfooter/Navfooter'
 import './Footer.sass'
+import './FooterResponsivo.sass'
 
 const Footer = () => {
 
@@ -15,7 +16,9 @@ const Footer = () => {
       <div className="footer1">
         <h1>Sobre</h1>
         <p>{footerSobre}</p>
-        <Navfooter />
+        <div className="nav_boot">
+          <Navfooter />
+        </div>
       </div>
       <div className="footer2">
         <h1>News</h1>
@@ -34,8 +37,8 @@ const Footer = () => {
           <div className="link" title="LinkedIn"><AiOutlineLinkedin /></div>
           <div className="git" title="GitHub"><FaGithub /></div>
           <div className="face" title="Facebook"><AiOutlineFacebook /></div>
-                </div>
         </div>
+      </div>
     </div>
   )
 }

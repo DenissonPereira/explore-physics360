@@ -3,6 +3,7 @@ import { ChangeEvent, useState } from 'react'
 import Int from '../../assets/images/equation.png'
 
 import './Integrais.less'
+import './IntegraisResponsivo.sass'
 
 const Integrais = () => {
 

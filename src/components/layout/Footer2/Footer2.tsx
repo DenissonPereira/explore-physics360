@@ -1,4 +1,5 @@
 import './Footer2.sass'
+import './Footer2Responsivo.sass'
 
 const Footer2 = () => {
   return (

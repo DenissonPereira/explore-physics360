@@ -2,6 +2,7 @@ import Atomo1 from '../../assets/images/atomo1.png'
 import Atomo2 from '../../assets/images/atomo2.png'
 
 import './Principais.sass'
+import './PrincipaisResponsivo.sass'
 
 const Principais = () => {
     return (

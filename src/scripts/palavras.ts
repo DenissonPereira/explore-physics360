@@ -18,6 +18,9 @@ type PalavrasChaves = {
     calorias: 'https://denissonpereira.github.io/explore-physics360/#/conversor',
     j: 'https://denissonpereira.github.io/explore-physics360/#/conversor',
     cal: 'https://denissonpereira.github.io/explore-physics360/#/conversor',
+    integrais: 'https://denissonpereira.github.io/explore-physics360/#/integrais',
+    int: 'https://denissonpereira.github.io/explore-physics360/#/integrais',
+    integral: 'https://denissonpereira.github.io/explore-physics360/#/integrais',
 
 
   };

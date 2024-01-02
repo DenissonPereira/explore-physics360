@@ -45,7 +45,7 @@ const Integrais = () => {
 
         let a: number = parseFloat(valor_a);
         let b: number = parseFloat(valor_b);
-        let n: number = parseFloat(valor_n);
+        const n: number = parseFloat(valor_n);
 
         const delta_x: number = math.abs(b-a) / n;
         
@@ -54,7 +54,7 @@ const Integrais = () => {
             while (a <= b) {
                 novaArea += math.evaluate(valor, { x: a}) * delta_x;
                 a = a + delta_x;
-            };
+            }
 
             novaArea = parseFloat(novaArea.toFixed(4));
 
@@ -70,12 +70,12 @@ const Integrais = () => {
             while (b <= a) {
                 novaArea += math.evaluate(valor, {x: b}) * delta_x;
                 b = b + delta_x;
-            };
+            }
 
             novaArea = parseFloat(novaArea.toFixed(4));
 
             setArea(-novaArea);
-        };
+        }
 
     };
 

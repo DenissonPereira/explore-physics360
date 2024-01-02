@@ -10,6 +10,7 @@ type PalavrasChaves = {
     segundo: 'https://denissonpereira.github.io/explore-physics360/#/conversor',
     quilometro: 'https://denissonpereira.github.io/explore-physics360/#/conversor',
     temperaturas: 'https://denissonpereira.github.io/explore-physics360/#/conversor',
+    temperatura: 'https://denissonpereira.github.io/explore-physics360/#/conversor',
     kelvin: 'https://denissonpereira.github.io/explore-physics360/#/conversor',
     celsius: 'https://denissonpereira.github.io/explore-physics360/#/conversor',
     fahrenheit: 'https://denissonpereira.github.io/explore-physics360/#/conversor',

@@ -35,7 +35,7 @@ Dê uma espiada nas imagens abaixo para ter uma prévia visual do projeto em aç
 [![Badge](https://img.shields.io/badge/TypeScript-blue?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Badge](https://img.shields.io/badge/Node.js-v21.4.0-green?style=flat&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Badge](https://img.shields.io/badge/React_Bootstrap-v2.9.1-purple?style=flat&logo=bootstrap&logoColor=white)](https://react-bootstrap.netlify.app/)
-[![Badge](https://img.shields.io/badge/Math.js-%23327ECC?style=flat&logo=javascript&logoColor=white)](https://mathjs.org/)
+[![Badge](https://img.shields.io/badge/Math.js-%23B20000?style=flat&logoColor=white)](https://mathjs.org/)
 
 
 

@@ -1,5 +1,7 @@
 import Integrais from "../../calculadoras/Integrais/Integrais"
 import NavbarPesquisar from "../../common/navbarPesquisar/NavbarPesquisar"
+import Footer from "../../components/layout/Footer/Footer"
+import Footer2 from "../../components/layout/Footer2/Footer2"
 
 
 const CalcIntegrais = () => {
@@ -7,6 +9,8 @@ const CalcIntegrais = () => {
     <div>
         <NavbarPesquisar />
         <Integrais />
+        <Footer />
+        <Footer2 />
     </div>
   )
 }

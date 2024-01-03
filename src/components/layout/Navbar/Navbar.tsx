@@ -26,6 +26,7 @@ function NavScrollExample() {
             <Nav.Link as={Link} to="/">HOME</Nav.Link>
             <Nav.Link as={Link} to="/integrais">INTEGRAIS</Nav.Link>
             <Nav.Link as={Link} to="/conversor">CONVERSOR</Nav.Link>
+            <Nav.Link as={Link} to="/calculadora">CALCULADORA</Nav.Link>
             <Nav.Link as={Link} to="/">NEWS</Nav.Link>
             <Nav.Link as={Link} to="/about">ABOUT</Nav.Link>
           </Nav>

@@ -1,5 +1,5 @@
-import Atomo1 from '../../assets/images/atomo1.png'
-import Atomo2 from '../../assets/images/atomo2.png'
+import Fractal from '../../assets/fractal-1352598_1920.jpg'
+import Atomo from '../../assets/atomo.png'
 
 import './Principais.sass'
 import './PrincipaisResponsivo.sass'
@@ -11,24 +11,12 @@ const Principais = () => {
                 <p><span className='phy'>PhysiConvert:</span> Simplificando o Mundo Físico, Unidade por Unidade.</p>
             </div>
             <div className="principal">
-                <div className="cartao">
-                    <figure className="atomo">
-                        <img src={Atomo2} alt="" />
-                    </figure>
-                    <p>Architecto ab natus ipsam distinctio adipisci dolorum sunt ad deleniti possimus quidem.</p>
+               <div className="card_atomo">
+                <div className="inner_atomo">
+                    <img src={Fractal} alt="" />
                 </div>
-                <div className="cartao">
-                    <figure className="atomo">
-                        <img src={Atomo1} alt="" />
-                    </figure>
-                    <p>Architecto ab natus ipsam distinctio adipisci dolorum sunt ad deleniti possimus quidem.</p>
-                </div>
-                <div className="cartao">
-                    <figure className="atomo">
-                        <img src={Atomo2} alt="" />
-                    </figure>
-                    <p>Architecto ab natus ipsam distinctio adipisci dolorum sunt ad deleniti possimus quidem.</p>
-                </div>
+                <img src={Atomo} alt="" className='title_atomo' />
+               </div>
             </div>
         </div>
     )

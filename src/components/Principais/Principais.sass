@@ -4,44 +4,53 @@
     
 .principais
     @include mixins.remover_margens
-    display: flex
-    flex-direction: column
     background-color: variables.$cor-de-fundo
     text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
+
 
 .titulo
     margin-top: 3em
     font-size: 2em
     color: variables.$cor-vermelho-texto
 
-.phy
-    font-family: 'Chocolate'
-    font-size: 1.5em
-    color: variables.$cor-azul-texto
-    text-shadow: 2px 2px 2px black
-
 .principal
-    @include mixins.remover_margens
-    background-color: variables.$cor-de-fundo
+    margin: 0
+
+    
+
+.card_atomo
+    position: relative
+    cursor: pointer
     display: flex
-    flex-direction: row
+    flex-direction: column
     justify-content: center
-    justify-items: center
     align-content: center
     align-items: center
 
-.cartao
-    display: flex
-    flex-direction: column
-    align-items: center
-    margin-top: 2em
-    width: 25em
-    p
-        color: black
-        text-align: center
-        width: 19em
+.title_atomo
+    cursor: pointer
+    width: 10em
+    position: absolute
 
-.atomo
+.inner_atomo
     img
-        width: 4em
-        border-radius: .2em
+        object-fit: cover
+        border-radius: 8px
+        width: 20em
+
+.card_atomo:hover .inner_atomo
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0px)
+    box-shadow: 2px 35px 32px -8px rgb(0, 0, 0, 0.75)
+    filter: blur(0.8px)
+
+.title_atomo
+    transform: translate(0%, 100%, 0%)
+
+.card_atomo:hover .title_atomo
+    transform: translate3d(0%, -90%, 0)
+
+.inner_atomo, .title_atomo
+    transition: all 1.5s

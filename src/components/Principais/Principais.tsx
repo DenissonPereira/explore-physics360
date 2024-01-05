@@ -7,6 +7,7 @@ import Calculadora from '../../assets/calculadoras/calculadora.png'
 
 import './Principais.sass'
 import './PrincipaisResponsivo.sass'
+import './Borda.less'
 
 const Principais = () => {
     return (

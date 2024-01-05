@@ -3,6 +3,7 @@ import Buscador from '../../Buscador/Buscador'
 import { GiAtom } from "react-icons/gi"
 
 import './Header.sass'
+import './HeaderResponsivo.sass'
 
 const Header = () => {
     return (

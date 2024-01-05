@@ -40,7 +40,7 @@ const Buscador: React.FC = () => {
 
   return (
     <div className='buscador_principal'>
-      <p>Explore <span className='explore'>Physics </span>360</p>
+      <p className='texto_titulo'>Explore <span className='explore'>Physics </span>360</p>
       <div className='buscar'>
         <input
           title='Pesquise cifras aqui'

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Cal = () => {
     const display = document.getElementsByClassName('tela_numeros')[0];

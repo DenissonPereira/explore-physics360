@@ -1,7 +1,14 @@
 @use '../../sass/variables.sass'
 @use '../../sass/mixins.sass'
 @use '../../sass/fonts.sass'
-    
+
+.phy
+    font-family: 'Wee'
+    font-size: 1.5em
+    color: black
+    text-shadow: 2px 2px 8px variables.$cor-azul-texto
+    font-weight: bold
+
 .principais
     @include mixins.remover_margens
     background-color: variables.$cor-de-fundo
@@ -35,10 +42,61 @@
     align-content: center
     align-items: center
 
+#card_1
+    animation: levitate_1 2s infinite alternate ease-in-out
+
+@keyframes levitate_1 
+    0% 
+        transform: translateY(0)
+
+    100% 
+        transform: translateY(-10px)
+
+#card_2
+    animation: levitate_2 3s infinite alternate ease-in-out
+
+@keyframes levitate_2 
+    0% 
+        transform: translateY(0)
+
+    100% 
+        transform: translateY(-10px)
+
+#card_3
+    animation: levitate_3 2s infinite alternate ease-in-out
+
+@keyframes levitate_3 
+    0% 
+        transform: translateY(0)
+
+    100% 
+        transform: translateY(-10px)
+
+#card_4
+    animation: levitate_4 3s infinite alternate ease-in-out
+
+@keyframes levitate_4 
+    0% 
+        transform: translateY(0)
+
+    100% 
+        transform: translateY(-10px)
+
 .title_atomo
     cursor: pointer
-    width: 10em
+    width: 15em
     position: absolute
+    filter: drop-shadow(6px 8px 6px black)
+    background-color: #ffffff23
+    border-radius: .5em
+
+#cal_icone
+    width: 10em
+
+#eletro
+    width: 19em
+    height: 10em
+
 
 .inner_atomo
     img

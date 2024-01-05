@@ -1,5 +1,12 @@
-import Fractal from '../../assets/ai-generated-8267561_1920.png'
-import Atomo from '../../assets/atomo.png'
+import GalaxiaAzul from '../../assets/galaxias/galaxia1.png'
+import GalaxiaVermelha from '../../assets/galaxias/galaxia2.png'
+import GalaxiaVerde from '../../assets/galaxias/galaxia3.png'
+import GalaxiaRosa from '../../assets/galaxias/galaxia5.png'
+
+import Integral from '../../assets/calculadoras/integral_foto.png'
+import Celsius from '../../assets/calculadoras/celsius.png'
+import Eletro from '../../assets/calculadoras/eletro.png'
+import Calculadora from '../../assets/calculadoras/calculadora.png'
 
 import './Principais.sass'
 import './PrincipaisResponsivo.sass'
@@ -12,35 +19,35 @@ const Principais = () => {
             </div>
             <div className="imagens_dinamicas">
             <div className="principal">
-                   <div className="card_atomo">
+                   <div className="card_atomo" id='card_1'>
                     <div className="inner_atomo">
-                        <img src={Fractal} alt="" />
+                        <img src={GalaxiaAzul} alt="" />
                     </div>
-                    <img src={Atomo} alt="" className='title_atomo' />
+                    <img src={Integral} alt="" className='title_atomo' />
                    </div>
                 </div>
                 <div className="principal">
-                   <div className="card_atomo">
+                   <div className="card_atomo" id='card_2'>
                     <div className="inner_atomo">
-                        <img src={Fractal} alt="" />
+                        <img src={GalaxiaVermelha} alt="" />
                     </div>
-                    <img src={Atomo} alt="" className='title_atomo' />
+                    <img src={Celsius} alt="" className='title_atomo' />
                    </div>
                 </div>
                 <div className="principal">
-                   <div className="card_atomo">
+                   <div className="card_atomo" id='card_3'>
                     <div className="inner_atomo">
-                        <img src={Fractal} alt="" />
+                        <img src={GalaxiaVerde} alt="" />
                     </div>
-                    <img src={Atomo} alt="" className='title_atomo' />
+                    <img src={Eletro} alt="" className='title_atomo' id='eletro' />
                    </div>
                 </div>
                 <div className="principal">
-                   <div className="card_atomo">
+                   <div className="card_atomo" id='card_4'>
                     <div className="inner_atomo">
-                        <img src={Fractal} alt="" />
+                        <img src={GalaxiaRosa} alt="" />
                     </div>
-                    <img src={Atomo} alt="" className='title_atomo' />
+                    <img src={Calculadora} alt="" className='title_atomo'id='cal_icone' />
                    </div>
                 </div>
             </div>

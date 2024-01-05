@@ -1,4 +1,4 @@
-import Fractal from '../../assets/astronomy-8338435_1920.png'
+import Fractal from '../../assets/ai-generated-8267561_1920.png'
 import Atomo from '../../assets/atomo.png'
 
 import './Principais.sass'
@@ -11,6 +11,14 @@ const Principais = () => {
                 <p><span className='phy'>PhysiConvert:</span> Simplificando o Mundo Físico, Unidade por Unidade.</p>
             </div>
             <div className="imagens_dinamicas">
+            <div className="principal">
+                   <div className="card_atomo">
+                    <div className="inner_atomo">
+                        <img src={Fractal} alt="" />
+                    </div>
+                    <img src={Atomo} alt="" className='title_atomo' />
+                   </div>
+                </div>
                 <div className="principal">
                    <div className="card_atomo">
                     <div className="inner_atomo">

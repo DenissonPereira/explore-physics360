@@ -1,9 +1,9 @@
 import Math from '../../../assets/images/maths.jpg'
-import Buscador from '../../Buscador/Buscador'
 import { GiAtom } from "react-icons/gi"
 
 import './Header.sass'
 import './HeaderResponsivo.sass'
+import BuscadorWhite from '../../BuscadorWhite/BuscadorWhite'
 
 const Header = () => {
     return (
@@ -16,7 +16,7 @@ const Header = () => {
                     <GiAtom />
                 </div>
                 <div className="buscador">
-                    <Buscador />
+                    <BuscadorWhite />
                 </div>
             </div>
         </div>

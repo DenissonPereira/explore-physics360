@@ -4,10 +4,10 @@ import { PiSigmaThin } from "react-icons/pi"
 import { TbMath } from "react-icons/tb"
 import { TbMathIntegrals } from "react-icons/tb"
 
-import './Explore.sass'
-import './ExploreResponsivo.sass'
+import './ExploreBlack.sass'
+import './ExploreBlackResponsivo.sass'
 
-const Explore = () => {
+const ExploreBlack = () => {
 
 
   const titulo = 'Explore mais';
@@ -37,11 +37,11 @@ const Explore = () => {
         <div className="calculadoras_explorar">
             <h2>Calculadoras</h2>
             <p>{descricao}</p>
-            <button className="botao_explorar_white" title="Explorar">EXPLORAR</button>
+            <button className="botao_explorar_black glow" title="Explorar">EXPLORAR</button>
           </div>
       </div>
     </div>
   )
 }
 
-export default Explore
+export default ExploreBlack;

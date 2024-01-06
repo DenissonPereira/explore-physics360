@@ -14,6 +14,7 @@ import { FaFlagUsa } from "react-icons/fa";
 import './Home.sass'
 import './Home.less'
 import { useState } from "react"
+import ExploreBlack from "../../components/ExploreBlack/ExploreBlack"
 
 
 
@@ -75,7 +76,7 @@ const Home = () => {
         {principaisW ? <PrincipaisWhite /> : <Principais />}
       </div>
       <div className="explore_home" style={{color}}>
-        <Explore />
+        {sol ? <Explore /> : <ExploreBlack />}
       </div>
       <div className="footer_home" style={{color}}>
         <Footer brasil={brasil} />

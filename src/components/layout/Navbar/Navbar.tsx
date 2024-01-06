@@ -22,7 +22,8 @@ const NavScrollExample: React.FC<NavbarProps> = ({brasil}) => {
   const nameProject = 'Explore Physics 360';
 
   useEffect(() => {
-    if (brasil === false) {
+
+    if (brasil === true) {
       setHome('HOME');
       setIntegrais('INTEGRALS');
       setConversorUnidades('CONVERTER');

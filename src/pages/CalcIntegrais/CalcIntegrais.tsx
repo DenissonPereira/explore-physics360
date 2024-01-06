@@ -9,7 +9,7 @@ const CalcIntegrais = () => {
     <div>
         <NavbarPesquisar />
         <Integrais />
-        <Footer />
+        <Footer brasil={true} />
         <Footer2 />
     </div>
   )

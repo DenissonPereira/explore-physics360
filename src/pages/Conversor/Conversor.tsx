@@ -13,7 +13,7 @@ const Conversor = () => {
         <Velocidade />
         <Temperatura />
         <Energia />
-        <Footer />
+        <Footer brasil={true} />
         <Footer2 />
     </div>
   )

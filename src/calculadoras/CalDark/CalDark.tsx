@@ -1,9 +1,12 @@
 import { useState } from "react";
 
-import './Cal.sass';
-import './CalResp.sass';
 
-const Cal = () => {
+import './CalDark.sass'
+import './CalDark.less'
+import './CalDarkResp.sass'
+
+
+const CalDark = () => {
 
     const [numero, setNumero] = useState<string>('');
 
@@ -93,8 +96,8 @@ const Cal = () => {
 
 
     return (
-        <div className="calculadora_principal">
-            <div className="calc_white">
+        <div className="calculadora_principal_black">
+            <div className="calc">
                 <div className="display">
                     <div className="tela_numeros">
                         {numero}
@@ -108,7 +111,7 @@ const Cal = () => {
                         <button id="1" onClick={divisao}>/</button>
                     </div>
                     <div className="linha2">
-                        <button id="1" onClick={sete}>7</button>
+                        <button id="1" onClick={sete}>77</button>
                         <button id="1" onClick={oito}>8</button>
                         <button id="1" onClick={nove}>9</button>
                         <button id="1" onClick={vezes}>x</button>
@@ -137,4 +140,4 @@ const Cal = () => {
     );
 }
 
-export default Cal;
+export default CalDark;

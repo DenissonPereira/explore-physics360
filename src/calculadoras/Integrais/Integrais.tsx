@@ -51,7 +51,7 @@ const Integrais = () => {
         
         if (a < b) {
 
-            while (a <= b) {
+            while (a < b) {
                 novaArea += math.evaluate(valor, { x: a}) * delta_x;
                 a = a + delta_x;
             }
@@ -67,7 +67,7 @@ const Integrais = () => {
             setArea(novaArea);
 
         } else {
-            while (b <= a) {
+            while (b < a) {
                 novaArea += math.evaluate(valor, {x: b}) * delta_x;
                 b = b + delta_x;
             }

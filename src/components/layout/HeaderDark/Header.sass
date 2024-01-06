@@ -1,0 +1,44 @@
+@use '../../../sass/fonts'
+@use '../../../sass/mixins'
+@use '../../../sass/variables'
+
+
+
+.header
+    @include mixins.remover_margens
+
+
+.math
+    position: relative
+    margin: 0px
+    
+    img
+        width: 100%
+        height: 45em
+        object-fit: cover
+
+.logo  
+    @include mixins.remover_margens 
+    text-align: center
+    position: absolute
+    top: 35%
+    left: 40%
+    transform: translate(-50%, -50%)
+
+.atomo
+    font-size: 5em
+    text-shadow: 2px 2px white
+    color: variables.$cor-vermelho-texto
+    svg
+        animation: acender 10s infinite
+
+    @keyframes acender
+        0%
+            filter: drop-shadow(6px 2px 2px white)
+            color: variables.$cor-vermelho-texto
+        50%
+            filter: drop-shadow(6px 2px 2px white)
+            color: white
+        100%
+            filter: drop-shadow(6px 2px 2px white)
+            color: variables.$cor-vermelho-texto

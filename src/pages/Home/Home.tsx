@@ -23,6 +23,7 @@ const Home = () => {
   const [sol, setSol] = useState(true);
   const [foguete, setFoguete] = useState(true);
   const [principaisW, setPrincipaisW] = useState(true);
+  const [tema, setTema] = useState('Mudar para modo escuro');
 
   const mudarTema = () => {
     if (backgroundColor == '#FFFFFF') {
@@ -31,12 +32,14 @@ const Home = () => {
       setSol(false);
       setFoguete(false);
       setPrincipaisW(false);
+      setTema('Mudar para modo claro');
     } else {
       setBackgroundColor('#FFFFFF');
       setColor('black');
       setSol(true);
       setFoguete(true);
       setPrincipaisW(true);
+      setTema('Mudar para modo escuro');
     }
   };
 
@@ -44,7 +47,7 @@ const Home = () => {
     <div className="home" style={{backgroundColor}}>
       <nav className="navegacao">
         <Navbar />
-        <button onClick={mudarTema}>
+        <button onClick={mudarTema} title={tema}>
           {sol ?  <LuMoon /> : <WiMoonAltThirdQuarter />} 
         </button>
       </nav>

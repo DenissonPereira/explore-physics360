@@ -103,7 +103,7 @@ const Cal = () => {
                 <div className="teclas">
                     <div className="linha1">
                         <button id="1" onClick={CE}>CE</button>
-                        <button id="1" onClick={raiz}>sqrt</button>
+                        <button id="1" onClick={raiz}>&radic;</button>
                         <button id="1" onClick={porcentagem}>%</button>
                         <button id="1" onClick={divisao}>/</button>
                     </div>

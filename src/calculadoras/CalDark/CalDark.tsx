@@ -106,12 +106,12 @@ const CalDark = () => {
                 <div className="teclas">
                     <div className="linha1">
                         <button id="1" onClick={CE}>CE</button>
-                        <button id="1" onClick={raiz}>sqrt</button>
+                        <button id="1" onClick={raiz}>&radic;</button>
                         <button id="1" onClick={porcentagem}>%</button>
                         <button id="1" onClick={divisao}>/</button>
                     </div>
                     <div className="linha2">
-                        <button id="1" onClick={sete}>77</button>
+                        <button id="1" onClick={sete}>7</button>
                         <button id="1" onClick={oito}>8</button>
                         <button id="1" onClick={nove}>9</button>
                         <button id="1" onClick={vezes}>x</button>

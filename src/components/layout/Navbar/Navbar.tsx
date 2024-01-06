@@ -4,11 +4,40 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import Spinnerapp from '../../../common/spinner/Spinnerapp';
+import { useEffect, useState } from 'react';
+
+interface NavbarProps {
+  brasil: boolean;
+}
 
 
+const NavScrollExample: React.FC<NavbarProps> = ({brasil}) => {
+  const [home, setHome] = useState('INÍCIO');
+  const [integrais, setIntegrais] = useState('INTEGRAIS');
+  const [conversorUnidades, setConversorUnidades] = useState('CONVERSOR');
+  const [calcu, setCalcu] = useState('CALCULADOA');
+  const [noticias, setNoticias] = useState('NOTÍCIAS');
+  const [sobre, setSobre] = useState('SOBRE');
 
-function NavScrollExample() {
   const nameProject = 'Explore Physics 360';
+
+  useEffect(() => {
+    if (brasil === false) {
+      setHome('HOME');
+      setIntegrais('INTEGRALS');
+      setConversorUnidades('CONVERTER');
+      setCalcu('CALCULATOR');
+      setNoticias('NEWS');
+      setSobre('ABOUT');
+    } else {
+      setHome('INÍCIO');
+      setIntegrais('INTEGRAIS');
+      setConversorUnidades('CONVERSOR');
+      setCalcu('CALCULADORA');
+      setNoticias('NOTÍCIAS');
+      setSobre('SOBRE');
+    }
+  }, [brasil]);
 
   return (
     <Navbar bg="dark" data-bs-theme="dark" expand="lg" className="bg-body-tertiary w-100" id='navbar'>
@@ -23,12 +52,12 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link as={Link} to="/">HOME</Nav.Link>
-            <Nav.Link as={Link} to="/integrais">INTEGRAIS</Nav.Link>
-            <Nav.Link as={Link} to="/conversor">CONVERSOR</Nav.Link>
-            <Nav.Link as={Link} to="/calculadora">CALCULADORA</Nav.Link>
-            <Nav.Link as={Link} to="/">NEWS</Nav.Link>
-            <Nav.Link as={Link} to="/about">ABOUT</Nav.Link>
+            <Nav.Link as={Link} to="/">{home}</Nav.Link>
+            <Nav.Link as={Link} to="/integrais">{integrais}</Nav.Link>
+            <Nav.Link as={Link} to="/conversor">{conversorUnidades}</Nav.Link>
+            <Nav.Link as={Link} to="/calculadora">{calcu}</Nav.Link>
+            <Nav.Link as={Link} to="/">{noticias}</Nav.Link>
+            <Nav.Link as={Link} to="/about">{sobre}</Nav.Link>
           </Nav>
           <Form className="d-flex">
           </Form>

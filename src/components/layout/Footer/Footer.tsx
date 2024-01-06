@@ -6,15 +6,41 @@ import { AiOutlineFacebook } from "react-icons/ai";
 import Navfooter from '../../../common/navfooter/Navfooter'
 import './Footer.sass'
 import './FooterResponsivo.sass'
+import { useEffect, useState } from "react";
 
-const Footer = () => {
+interface FooterProps {
+  brasil: boolean;
+}
 
-  const footerSobre = 'O projeto "Explore Physics 360" foi cuidadosamente concebido para proporcionar suporte abrangente aos estudantes de todos os níveis, oferecendo uma experiência imersiva e acessível no aprendizado da física.';
+const Footer: React.FC<FooterProps> = ({brasil}) => {
+
+  const [sobreText, setSobreText] = useState('Sobre');
+  const [footerSobre, setFooterSobre] = useState(
+    'O projeto "Explore Physics 360" foi cuidadosamente concebido para proporcionar suporte abrangente aos estudantes de todos os níveis, oferecendo uma experiência imersiva e acessível no aprendizado da física.'
+  );
+  const [seguir, setSeguir] = useState('Siga-nos');
+
+  useEffect(() => {
+    if (brasil == false) {
+      setSobreText('About');
+      setFooterSobre(
+        'The "Explore Physics 360" project has been carefully designed to provide comprehensive support to students of all levels, offering an immersive and accessible experience in learning physics.'
+      );
+      setSeguir('Follow us');
+    } else {
+      setSobreText('Sobre');
+      setFooterSobre(
+        'O projeto "Explore Physics 360" foi cuidadosamente concebido para proporcionar suporte abrangente aos estudantes de todos os níveis, oferecendo uma experiência imersiva e acessível no aprendizado da física.'
+      );
+      setSeguir('Siga-nos');
+    }
+  }, [brasil]);
+
 
   return (
     <div className='footer'>
       <div className="footer1">
-        <h1>Sobre</h1>
+        <h1>{sobreText}</h1>
         <p>{footerSobre}</p>
         <div className="nav_boot">
           <Navfooter />
@@ -31,7 +57,7 @@ const Footer = () => {
 
       </div>
       <div className="footer3">
-        <h1>Siga-nos</h1>
+        <h1>{seguir}</h1>
         <div className="redes">
           <div className="insta" title="Instagram"><FaInstagram /></div>
           <div className="link" title="LinkedIn"><AiOutlineLinkedin /></div>

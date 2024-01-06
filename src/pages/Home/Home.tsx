@@ -8,6 +8,8 @@ import { WiMoonAltThirdQuarter } from "react-icons/wi";
 import { LuMoon } from "react-icons/lu";
 import HeaderDark from "../../components/layout/HeaderDark/HeaderDark"
 import PrincipaisWhite from "../../components/PrincipaisWhite/PrincipaisWhite"
+import { GiBrazilFlag } from "react-icons/gi";
+import { FaFlagUsa } from "react-icons/fa";
 
 import './Home.sass'
 import './Home.less'
@@ -18,12 +20,24 @@ import { useState } from "react"
 
 const Home = () => {
 
+  const [brasil, setBrasil] = useState(true);
+
+  const mudarIdioma = () => {
+    if (brasil) {
+      setBrasil(false);
+    } else {
+      setBrasil(true);
+    }
+
+  }
+
   const [backgroundColor, setBackgroundColor] = useState('#FFFFFF');
   const [color, setColor] = useState('black');
   const [sol, setSol] = useState(true);
   const [foguete, setFoguete] = useState(true);
   const [principaisW, setPrincipaisW] = useState(true);
   const [tema, setTema] = useState('Mudar para modo escuro');
+
 
   const mudarTema = () => {
     if (backgroundColor == '#FFFFFF') {
@@ -46,7 +60,10 @@ const Home = () => {
   return (
     <div className="home" style={{backgroundColor}}>
       <nav className="navegacao">
-        <Navbar />
+        <Navbar brasil={brasil} />
+        <button onClick={mudarIdioma}>
+          {brasil ?  <FaFlagUsa /> : <GiBrazilFlag />}
+        </button>
         <button onClick={mudarTema} title={tema}>
           {sol ?  <LuMoon /> : <WiMoonAltThirdQuarter />} 
         </button>
@@ -61,7 +78,7 @@ const Home = () => {
         <Explore />
       </div>
       <div className="footer_home" style={{color}}>
-        <Footer />
+        <Footer brasil={brasil} />
         <Footer2 />
       </div>
     </div>

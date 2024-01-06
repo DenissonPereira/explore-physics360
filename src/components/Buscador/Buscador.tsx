@@ -53,7 +53,7 @@ const Buscador: React.FC = () => {
         />
         <button
           title='Ir'
-          className='btn_ir'
+          className='btn_ir glow-on-hover'
           id='meuBotao'
           ref={meuBotaoRef} 
           onClick={pesquisar}

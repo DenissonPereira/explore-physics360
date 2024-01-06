@@ -23,7 +23,7 @@ const NavScrollExample: React.FC<NavbarProps> = ({brasil}) => {
 
   useEffect(() => {
 
-    if (brasil === true) {
+    if (brasil === false) {
       setHome('HOME');
       setIntegrais('INTEGRALS');
       setConversorUnidades('CONVERTER');

@@ -15,7 +15,7 @@ const NavScrollExample: React.FC<NavbarProps> = ({brasil}) => {
   const [home, setHome] = useState('INÍCIO');
   const [integrais, setIntegrais] = useState('INTEGRAIS');
   const [conversorUnidades, setConversorUnidades] = useState('CONVERSOR');
-  const [calcu, setCalcu] = useState('CALCULADOA');
+  const [calcu, setCalcu] = useState('CALCULADORA');
   const [noticias, setNoticias] = useState('NOTÍCIAS');
   const [sobre, setSobre] = useState('SOBRE');
 
@@ -31,7 +31,7 @@ const NavScrollExample: React.FC<NavbarProps> = ({brasil}) => {
       setNoticias('NEWS');
       setSobre('ABOUT');
     } else {
-      setHome('INÍCIOs');
+      setHome('INÍCIO');
       setIntegrais('INTEGRAIS');
       setConversorUnidades('CONVERSOR');
       setCalcu('CALCULADORA');

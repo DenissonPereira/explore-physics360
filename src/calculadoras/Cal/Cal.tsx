@@ -80,7 +80,14 @@ const Cal = () => {
     }
 
     const trocarSinal = () => {
-        setNumero('');
+        const valorNumerico = parseFloat(numero);
+        if (valorNumerico < 0) {
+            const positivo = (-1) * valorNumerico;
+            setNumero(positivo.toString());
+        } else {
+            const negativo = (-1) * valorNumerico;
+            setNumero(negativo.toString());
+        };
     }
 
     const ponto = () => {

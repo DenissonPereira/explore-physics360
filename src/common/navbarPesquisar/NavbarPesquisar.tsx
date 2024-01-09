@@ -27,6 +27,7 @@ function NavbarPesquisar() {
                         <Nav.Link as={Link} to="/">HOME</Nav.Link>
                         <Nav.Link as={Link} to="/integrais">INTEGRAIS</Nav.Link>
                         <Nav.Link as={Link} to="/conversor">CONVERSOR</Nav.Link>
+                        <Nav.Link as={Link} to="/calculadora">CALCULADORA</Nav.Link>
                         <NavDropdown title="Link" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action4">

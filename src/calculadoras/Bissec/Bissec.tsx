@@ -1,7 +1,9 @@
 import { ChangeEvent, useState } from 'react'
-import './Bissec.sass'
 import { abs } from 'mathjs';
 import * as math from 'mathjs';
+
+import './Bissec.sass'
+import './BissecResponsivo.sass'
 
 const Bissec = () => {
 
@@ -10,6 +12,14 @@ const Bissec = () => {
   const [valor_tol, setValor_tol] = useState<string>('');
   const [funcao, setFunction] = useState<string>('');
   const [raiz, setRaiz] = useState<number>(0);
+  const [precisao, setPrecisao] = useState<string>('');
+
+  const handleChange_precisao = (event: ChangeEvent<HTMLInputElement>) => {
+    const input_precisao = event.target.value;
+    setPrecisao(input_precisao);
+  }
+
+  const valor_precisao: number = parseInt(precisao);
 
   const handleChange_a = (event: ChangeEvent<HTMLInputElement>) => {
     const input_a = event.target.value;
@@ -54,7 +64,7 @@ const Bissec = () => {
 
     let raiz = (a + b) / 2;
 
-    setRaiz(parseFloat(raiz.toFixed(4)));
+    setRaiz(parseFloat(raiz.toFixed(valor_precisao)));
   }
 
 
@@ -101,6 +111,16 @@ const Bissec = () => {
               placeholder='Tolerância'
               onChange={handleChange_tol}
               title='Digite o valor da tolerância'
+            />
+          </div>
+          <div className="precisao">
+            <p>Precisão: </p>
+            <input
+              type="text"
+              title='Digite o valor da precisão'
+              value={precisao}
+              onChange={handleChange_precisao}
+              id='precisao'
             />
           </div>
         </div>

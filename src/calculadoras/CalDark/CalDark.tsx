@@ -66,6 +66,8 @@ const CalDark = () => {
                 divisao();
             } else if (event.key === '*' && meuBotaoVezesRef.current) {
                 vezes();
+            } else if (event.key === 'Backspace') {
+                apagar();
             }
         };
 
@@ -75,6 +77,20 @@ const CalDark = () => {
             document.removeEventListener('keyup', teclado);
         };
     }, []);
+
+    const apagar = () => {
+
+        setNumero(prevNumero => {
+            if(prevNumero.length > 0) {
+                const numeroArray = prevNumero.split('');
+                numeroArray.pop();
+                const novaString = numeroArray.join('');
+                return novaString;
+            } else {
+                return prevNumero;
+            }
+        });
+    }
 
 
     const um = () => {

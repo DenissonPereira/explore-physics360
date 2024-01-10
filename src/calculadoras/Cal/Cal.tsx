@@ -63,6 +63,8 @@ const Cal = () => {
                 divisao();
             } else if (event.key === '*' && meuBotaoVezesRef.current) {
                 vezes();
+            } else if (event.key === 'Backspace') {
+                apagar();
             }
         };
 
@@ -73,6 +75,19 @@ const Cal = () => {
         };
     }, []);
 
+    const apagar = () => {
+
+        setNumero(prevNumero => {
+            if(prevNumero.length > 0) {
+                const numeroArray = prevNumero.split('');
+                numeroArray.pop();
+                const novaString = numeroArray.join('');
+                return novaString;
+            } else {
+                return prevNumero;
+            }
+        });
+    }
 
     const um = () => {
         setNumero((prevNumero) => prevNumero + '1');

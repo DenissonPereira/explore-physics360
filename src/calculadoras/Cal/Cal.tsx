@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import './Cal.sass';
 import './CalResp.sass';
@@ -7,44 +7,111 @@ const Cal = () => {
 
     const [numero, setNumero] = useState<string>('');
 
+    const meuBotaoUmRef = useRef<HTMLButtonElement>(null);
+    const meuBotaoDoisRef = useRef<HTMLButtonElement>(null);
+    const meuBotaoTresRef = useRef<HTMLButtonElement>(null);
+    const meuBotaoQuatroRef = useRef<HTMLButtonElement>(null);
+    const meuBotaoCincoRef = useRef<HTMLButtonElement>(null);
+    const meuBotaoSeisRef = useRef<HTMLButtonElement>(null);
+    const meuBotaoSeteRef = useRef<HTMLButtonElement>(null);
+    const meuBotaoOitoRef = useRef<HTMLButtonElement>(null);
+    const meuBotaoNoveRef = useRef<HTMLButtonElement>(null);
+    const meuBotaoZeroRef = useRef<HTMLButtonElement>(null);
+
+    const meuBotaoCeRef = useRef<HTMLButtonElement>(null);
+    const meuBotaoSomaRef = useRef<HTMLButtonElement>(null);
+    const meuBotaoIgualRef = useRef<HTMLButtonElement>(null);
+    const meuBotaoPontoRef = useRef<HTMLButtonElement>(null);
+    const meuBotaoDivisaoRef = useRef<HTMLButtonElement>(null);
+    const meuBotaoVezesRef = useRef<HTMLButtonElement>(null);
+    const meuBotaoMenosRef = useRef<HTMLButtonElement>(null);
+
+
+    useEffect(() => {
+        const teclado = (event: KeyboardEvent) => {
+            if(event.key === '1' && meuBotaoUmRef.current) {
+                um();
+            } else if (event.key === '2' && meuBotaoDoisRef.current) {
+                dois();
+            } else if (event.key === '3' && meuBotaoTresRef.current) {
+                tres();
+            } else if (event.key === '4' && meuBotaoQuatroRef.current) {
+                quatro();
+            } else if (event.key === '5' && meuBotaoCincoRef.current) {
+                cinco();
+            } else if (event.key === '6' && meuBotaoSeisRef.current) {
+                seis();
+            } else if (event.key === '7' && meuBotaoSeteRef.current) {
+                sete();
+            } else if (event.key === '8' && meuBotaoOitoRef.current) {
+                oito();
+            } else if (event.key === '9' && meuBotaoNoveRef.current) {
+                nove();
+            } else if (event.key === '0' && meuBotaoZeroRef.current) {
+                zero();
+            } else if (event.key === 'Escape' && meuBotaoCeRef.current) {
+                CE();
+            } else if (event.key === '+' && meuBotaoSomaRef.current) {
+                mais();
+            } else if (event.key === 'Enter' && meuBotaoIgualRef.current) {
+                igual();
+            } else if (event.key === '.' && meuBotaoPontoRef.current) {
+                ponto();
+            } else if (event.key === '-' && meuBotaoMenosRef.current) {
+                menos();
+            } else if (event.key === '/' && meuBotaoDivisaoRef.current) {
+                divisao();
+            } else if (event.key === '*' && meuBotaoVezesRef.current) {
+                vezes();
+            }
+        };
+
+        document.addEventListener('keyup', teclado);
+
+        return () => {
+            document.removeEventListener('keyup', teclado);
+        };
+    }, []);
+
+
     const um = () => {
-        setNumero(numero + '1');
+        setNumero((prevNumero) => prevNumero + '1');
     }
 
     const dois = () => {
-        setNumero(numero + '2');
+        setNumero((prevNumero) => prevNumero + '2');
     }
 
     const tres = () => {
-        setNumero(numero + '3');
+        setNumero((prevNumero) => prevNumero + '3');
     }
 
     const quatro = () => {
-        setNumero(numero + '4');
+        setNumero((prevNumero) => prevNumero + '4');
     }
 
     const cinco = () => {
-        setNumero(numero + '5');
+        setNumero((prevNumero) => prevNumero + '5');
     }
 
     const seis = () => {
-        setNumero(numero + '6');
+        setNumero((prevNumero) => prevNumero + '6');
     }
 
     const sete = () => {
-        setNumero(numero + '7');
+        setNumero((prevNumero) => prevNumero + '7');
     }
 
     const oito = () => {
-        setNumero(numero + '8');
+        setNumero((prevNumero) => prevNumero + '8');
     }
 
     const nove = () => {
-        setNumero(numero + '9');
+        setNumero((prevNumero) => prevNumero + '9');
     }
 
     const zero = () => {
-        setNumero(numero + '0');
+        setNumero((prevNumero) => prevNumero + '0');
     }
 
     const CE = () => {
@@ -64,19 +131,19 @@ const Cal = () => {
     }
 
     const divisao = () => {
-        setNumero(numero + '/');
+        setNumero((prevNumero) => prevNumero + '/');
     }
 
     const vezes = () => {
-        setNumero(numero + '*');
+        setNumero((prevNumero) => prevNumero + '*');
     }
 
     const menos = () => {
-        setNumero(numero + '-');
+        setNumero((prevNumero) => prevNumero + '-');
     }
 
     const mais = () => {
-        setNumero(numero + '+');
+        setNumero((prevNumero) => prevNumero + '+');
     }
 
     const trocarSinal = () => {
@@ -91,11 +158,11 @@ const Cal = () => {
     }
 
     const ponto = () => {
-        setNumero(numero + '.');
+        setNumero((prevNumero) => prevNumero + '.');
     }
 
     const igual = () => {
-        setNumero(eval(numero))
+        setNumero((prevNumero) => eval(prevNumero));
     }
 
 
@@ -109,34 +176,34 @@ const Cal = () => {
                 </div>
                 <div className="teclas">
                     <div className="linha1">
-                        <button id="1" onClick={CE}>CE</button>
+                        <button id="1" onClick={CE} ref={meuBotaoCeRef}>CE</button>
                         <button id="1" onClick={raiz}>&radic;</button>
                         <button id="1" onClick={porcentagem}>%</button>
-                        <button id="1" onClick={divisao}>/</button>
+                        <button id="1" onClick={divisao} ref={meuBotaoDivisaoRef}>/</button>
                     </div>
                     <div className="linha2">
-                        <button id="1" onClick={sete}>7</button>
-                        <button id="1" onClick={oito}>8</button>
-                        <button id="1" onClick={nove}>9</button>
-                        <button id="1" onClick={vezes}>x</button>
+                        <button id="1" onClick={sete} ref={meuBotaoSeteRef}>7</button>
+                        <button id="1" onClick={oito} ref={meuBotaoOitoRef}>8</button>
+                        <button id="1" onClick={nove} ref={meuBotaoNoveRef}>9</button>
+                        <button id="1" onClick={vezes} ref={meuBotaoVezesRef}>x</button>
                     </div>
                     <div className="linha3">
-                        <button id="1" onClick={quatro}>4</button>
-                        <button id="1" onClick={cinco}>5</button>
-                        <button id="1" onClick={seis}>6</button>
-                        <button id="1" onClick={menos}>-</button>
+                        <button id="1" onClick={quatro} ref={meuBotaoQuatroRef}>4</button>
+                        <button id="1" onClick={cinco} ref={meuBotaoCincoRef}>5</button>
+                        <button id="1" onClick={seis} ref={meuBotaoSeisRef}>6</button>
+                        <button id="1" onClick={menos} ref={meuBotaoMenosRef}>-</button>
                     </div>
                     <div className="linha4">
-                        <button id="1" onClick={um}>1</button>
-                        <button id="2" onClick={dois}>2</button>
-                        <button id="2" onClick={tres}>3</button>
-                        <button id="2" onClick={mais}>+</button>
+                        <button id="1" onClick={um} ref={meuBotaoUmRef}>1</button>
+                        <button id="2" onClick={dois} ref={meuBotaoDoisRef}>2</button>
+                        <button id="2" onClick={tres} ref={meuBotaoTresRef}>3</button>
+                        <button id="2" onClick={mais} ref={meuBotaoSomaRef}>+</button>
                     </div>
                     <div className="linha5">
                         <button id="2" onClick={trocarSinal}>+/-</button>
-                        <button id="2" onClick={zero}>0</button>
-                        <button id="2" onClick={ponto}>.</button>
-                        <button id="2" onClick={igual}>=</button>
+                        <button id="2" onClick={zero} ref={meuBotaoZeroRef}>0</button>
+                        <button id="2" onClick={ponto} ref={meuBotaoPontoRef}>.</button>
+                        <button id="2" onClick={igual} ref={meuBotaoIgualRef}>=</button>
                     </div>
                 </div>
             </div>

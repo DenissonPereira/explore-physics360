@@ -18,7 +18,7 @@ const Buscador: React.FC = () => {
         alert('Não foi possível abrir uma nova aba. Verifique as configurações do seu navegador.');
       }
     } else {
-      alert('Cifra ou palavra-chave não encontrada!');
+      alert('Palavra-chave não encontrada!');
     }
   };
 
@@ -43,7 +43,7 @@ const Buscador: React.FC = () => {
       <p className='texto_titulo'>Explore <span className='explore'>Physics </span>360</p>
       <div className='buscar'>
         <input
-          title='Pesquise cifras aqui'
+          title='Pesquise aqui'
           type='search'
           id='searchInput'
           className='barra_pesquisa'

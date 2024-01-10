@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -6,8 +7,26 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import Spinnerapp from '../spinner/Spinnerapp';
+import palavrasChaves from '../../scripts/palavras';
 
 function NavbarPesquisar() {
+    const [key, setKey] = useState<string>('');
+
+    const pesquisar = () => {
+        const searchInput = document.getElementById('searchInput') as HTMLInputElement;
+        const keyword = searchInput.value.toLowerCase();
+
+        if (palavrasChaves[keyword]) {
+            const novaAba = window.open('', '_blank');
+            if (novaAba) {
+                novaAba.location.href = palavrasChaves[keyword];
+            } else {
+                alert('Não foi possível abrir uma nova aba. Verifique as configurações do seu navegador.');
+            }
+        } else {
+            alert('Palavra chave não encontrada!');
+        }
+    }
 
     const nameProject = 'Explore Physics 360';
 
@@ -45,11 +64,14 @@ function NavbarPesquisar() {
                     <Form className="d-flex">
                         <Form.Control
                             type="search"
-                            placeholder="Search"
+                            placeholder="Pesquise aqui"
                             className="me-2"
                             aria-label="Search"
+                            id='searchInput'
+                            value={key}
+                            onChange={(e) => setKey(e.target.value)}
                         />
-                        <Button variant="outline-success">Search</Button>
+                        <Button variant="outline-success" onClick={pesquisar}>Search</Button>
                     </Form>
                 </Navbar.Collapse>
             </Container>

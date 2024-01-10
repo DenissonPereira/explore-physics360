@@ -4,6 +4,7 @@ import About from '../pages/About/About.tsx'
 import Conversor from '../pages/Conversor/Conversor.tsx'
 import CalcIntegrais from '../pages/CalcIntegrais/CalcIntegrais.tsx'
 import Calculadora from '../pages/Calculadora/Calculadora.tsx'
+import Matrizes from '../pages/Matrizes/Matrizes.tsx'
 
 const Routesapp = () => {
   return (
@@ -14,6 +15,7 @@ const Routesapp = () => {
             <Route path='/conversor' element={<Conversor />} />
             <Route path='/integrais' element={<CalcIntegrais />} />
             <Route path='/calculadora' element={<Calculadora />} />
+            <Route path='/matrizes' element={<Matrizes />} />
         </Routes>
     </HashRouter>
   )

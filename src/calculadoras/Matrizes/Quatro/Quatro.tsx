@@ -101,15 +101,17 @@ const Quatro = () => {
     const o = parseFloat(valor_o);
     const p = parseFloat(valor_p);
 
-    const m_1 = f * k * p + g * l * n + h * j * o - h * k * n - g * j * p - f * l * o;
+    const m_1 = f*(k*p-l*o)-g*(j*p-l*n)+h*(j*o-k*n);
 
-    const m_2 = e * k * p + g * l * m + h * j * o - h * k * m - g * j * p - e * l * o;
-
-    const m_3 = e * j * p + f * l * m + h * i * o - h * j * m - f * i * p - e * l * o;
-
-    const m_4 = e * j * o + f * k * m + g * i * n - g * j * m - f * i * o - e * k * n;
+    const m_2 = e*(k*p-l*o)-g*(i*p-l*m)+h*(i*o-k*m);
+    
+    const m_3 = e*(j*p-l*n)-f*(i*p-l*m)+h*(i*n-j*m);
+    
+    const m_4 = e * (j*o-k*n)-f*(i*o-k*m)+g*(i*n-j*m);
+    
 
     const calcularMatrizQuatro = a * m_1 - b * m_2 + c * m_3 - d * m_4;
+    
 
 
     return (

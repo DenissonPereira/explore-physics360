@@ -5,13 +5,14 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import Spinnerapp from '../../../common/spinner/Spinnerapp';
 import { useEffect, useState } from 'react';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 interface NavbarProps {
   brasil: boolean;
 }
 
 
-const NavScrollExample: React.FC<NavbarProps> = ({brasil}) => {
+const NavScrollExample: React.FC<NavbarProps> = ({ brasil }) => {
   const [home, setHome] = useState('INÍCIO');
   const [integrais, setIntegrais] = useState('INTEGRAIS');
   const [conversorUnidades, setConversorUnidades] = useState('CONVERSOR');
@@ -19,6 +20,7 @@ const NavScrollExample: React.FC<NavbarProps> = ({brasil}) => {
   const [noticias, setNoticias] = useState('NOTÍCIAS');
   const [sobre, setSobre] = useState('SOBRE');
   const [matrizes, setMatrizes] = useState('MATRIZES');
+  const [metodos, setMetodos] = useState('MÉT. NÚMERICOS');
 
   const nameProject = 'Explore Physics 360';
 
@@ -32,6 +34,7 @@ const NavScrollExample: React.FC<NavbarProps> = ({brasil}) => {
       setNoticias('NEWS');
       setSobre('ABOUT');
       setMatrizes('MATRIX');
+      setMetodos('NUM. METHODS');
     } else {
       setHome('INÍCIO');
       setIntegrais('INTEGRAIS');
@@ -40,6 +43,7 @@ const NavScrollExample: React.FC<NavbarProps> = ({brasil}) => {
       setNoticias('NOTÍCIAS');
       setSobre('SOBRE');
       setMatrizes('MATRIZES');
+      setMetodos('MÉT. NÚMERICOS')
     }
   }, [brasil]);
 
@@ -57,10 +61,18 @@ const NavScrollExample: React.FC<NavbarProps> = ({brasil}) => {
             navbarScroll
           >
             <Nav.Link as={Link} to="/">{home}</Nav.Link>
-            <Nav.Link as={Link} to="/integrais">{integrais}</Nav.Link>
             <Nav.Link as={Link} to="/conversor">{conversorUnidades}</Nav.Link>
             <Nav.Link as={Link} to="/calculadora">{calcu}</Nav.Link>
             <Nav.Link as={Link} to="/matrizes">{matrizes}</Nav.Link>
+            <NavDropdown title={metodos} id="navbarScrollingDropdown">
+              <NavDropdown.Item as={Link} to="/integrais">
+                {integrais}
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item as={Link} to="/bisseccao">
+                BISSECCAO
+              </NavDropdown.Item>
+            </NavDropdown>
             <Nav.Link as={Link} to="/">{noticias}</Nav.Link>
             <Nav.Link as={Link} to="/about">{sobre}</Nav.Link>
           </Nav>

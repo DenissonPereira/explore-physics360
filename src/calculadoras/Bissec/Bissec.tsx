@@ -47,6 +47,7 @@ const Bissec = () => {
 
   const calcularResultadoBi = () => {
 
+
     let interacao: number = 1;
 
     while (abs(b - a) / 2 > tol) {
@@ -66,8 +67,6 @@ const Bissec = () => {
 
     setRaiz(parseFloat(raiz.toFixed(valor_precisao)));
   }
-
-
 
   return (
     <div>

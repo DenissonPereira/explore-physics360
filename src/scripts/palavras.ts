@@ -23,6 +23,8 @@ type PalavrasChaves = {
     integrais: 'https://denissonpereira.github.io/explore-physics360/#/integrais',
     int: 'https://denissonpereira.github.io/explore-physics360/#/integrais',
     integral: 'https://denissonpereira.github.io/explore-physics360/#/integrais',
+    bissecção: 'https://denissonpereira.github.io/explore-physics360/#/bisseccao',
+    bi: 'https://denissonpereira.github.io/explore-physics360/#/bisseccao',
 
 
   };

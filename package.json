@@ -17,7 +17,7 @@
     "@types/victory": "^35.0.0",
     "bootstrap": "^5.3.2",
     "katex": "^0.16.9",
-    "mathjs": "^12.2.1",
+    "mathjs": "^12.3.0",
     "mathjs-simple-integral": "^0.1.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.2",

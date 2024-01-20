@@ -1,6 +1,9 @@
 import { Spinner } from 'react-bootstrap'
 import MinhaFoto from '../../assets/minha_foto_1.png'
+
 import './Sobre.sass'
+import './SobreResponsivo.sass'
+
 
 const Sobre = () => {
     return (

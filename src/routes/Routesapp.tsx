@@ -7,6 +7,7 @@ import Calculadora from '../pages/Calculadora/Calculadora.tsx'
 import Matrizes from '../pages/Matrizes/Matrizes.tsx'
 import Bisseccao from '../pages/Bisseccao/Bisseccao.tsx'
 import Graficos from '../pages/Graficos/Graficos.tsx'
+import Derivada from '../pages/Derivada/Derivada.tsx'
 
 const Routesapp = () => {
   return (
@@ -20,6 +21,7 @@ const Routesapp = () => {
             <Route path='/matrizes' element={<Matrizes />} />
             <Route path='/bisseccao' element={<Bisseccao />} />
             <Route path='/graficos' element={<Graficos />} />
+            <Route path='/derivadas' element={<Derivada />} />
         </Routes>
     </HashRouter>
   )

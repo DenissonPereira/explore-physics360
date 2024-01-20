@@ -44,6 +44,7 @@ function NavbarPesquisar() {
                         navbarScroll
                     >
                         <Nav.Link as={Link} to="/">HOME</Nav.Link>
+                        <Nav.Link as={Link} to="/derivadas">DERIVADAS</Nav.Link>
                         <Nav.Link as={Link} to="/conversor">CONVERSOR</Nav.Link>
                         <Nav.Link as={Link} to="/calculadora">CALCULADORA</Nav.Link>
                         <Nav.Link as={Link} to="/matrizes">MATRIZES</Nav.Link>

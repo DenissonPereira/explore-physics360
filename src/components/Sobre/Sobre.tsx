@@ -1,5 +1,4 @@
 import { Spinner } from 'react-bootstrap'
-import MinhaFoto from '../../assets/minha_foto_1.png'
 
 import './Sobre.sass'
 import './SobreResponsivo.sass'
@@ -15,7 +14,6 @@ const Sobre = () => {
                         O Explore Physics 360 é um projeto dinâmico concebido e desenvolvido por Denisson Pereira, com o objetivo de fornecer uma gama abrangente de calculadoras dedicadas a físicos, matemáticos, desenvolvedores e estudantes. Este projeto surge da visão de criar uma plataforma versátil que atenda às diversas necessidades de profissionais e estudiosos que buscam ferramentas robustas para realizar cálculos precisos e complexos em diversas áreas da física e matemática.
                     </p>
                     <div className="sobre_mim">
-                        <img src={MinhaFoto} />
                         <p>
                             Denisson Pereira é um estudante de doutorado em física teórica e um habilidoso desenvolvedor full stack. Graduado em física e matemática, ele canaliza sua paixão pelo mundo das exatas e tecnologia em sua jornada acadêmica e profissional. Sua combinação única de conhecimentos teóricos em física e habilidades práticas em desenvolvimento de software o capacita a abordar desafios complexos com uma perspectiva abrangente. Denisson dedica-se não apenas à pesquisa avançada na área de física teórica, mas também à criação de soluções inovadoras e eficientes no campo da tecnologia, refletindo seu comprometimento com a interseção entre ciência e desenvolvimento tecnológico.
                         </p>

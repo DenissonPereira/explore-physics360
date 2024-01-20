@@ -21,6 +21,7 @@ const NavScrollExample: React.FC<NavbarProps> = ({ brasil }) => {
   const [sobre, setSobre] = useState('SOBRE');
   const [matrizes, setMatrizes] = useState('MATRIZES');
   const [metodos, setMetodos] = useState('MÉT. NÚMERICOS');
+  const [graficos, setGraficos] = useState('GRÁFICOS');
 
   const nameProject = 'Explore Physics 360';
 
@@ -35,6 +36,7 @@ const NavScrollExample: React.FC<NavbarProps> = ({ brasil }) => {
       setSobre('ABOUT');
       setMatrizes('MATRIX');
       setMetodos('NUM. METHODS');
+      setGraficos('GRAPHS');
     } else {
       setHome('INÍCIO');
       setIntegrais('INTEGRAIS');
@@ -43,7 +45,8 @@ const NavScrollExample: React.FC<NavbarProps> = ({ brasil }) => {
       setNoticias('NOTÍCIAS');
       setSobre('SOBRE');
       setMatrizes('MATRIZES');
-      setMetodos('MÉT. NÚMERICOS')
+      setMetodos('MÉT. NÚMERICOS');
+      setGraficos('GRÁFICOS');
     }
   }, [brasil]);
 
@@ -73,6 +76,7 @@ const NavScrollExample: React.FC<NavbarProps> = ({ brasil }) => {
                 BISSECCAO
               </NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link as={Link} to="/graficos">{graficos}</Nav.Link>
             <Nav.Link as={Link} to="/">{noticias}</Nav.Link>
             <Nav.Link as={Link} to="/about">{sobre}</Nav.Link>
           </Nav>

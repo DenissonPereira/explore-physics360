@@ -56,6 +56,7 @@ function NavbarPesquisar() {
                                 BISSECCAO
                             </NavDropdown.Item>
                         </NavDropdown>
+                        <Nav.Link as={Link} to="/graficos">GRÁFICOS</Nav.Link>
                         <Nav.Link href="#" disabled>
                             Link
                         </Nav.Link>

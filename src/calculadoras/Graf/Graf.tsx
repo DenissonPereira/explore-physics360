@@ -3,6 +3,7 @@ import { VictoryLine, VictoryChart, VictoryTheme, VictoryAxis } from 'victory';
 import * as math from 'mathjs';
 
 import './Graf.sass'
+import './GrafResponsivo.sass'
 
 interface DataPoint {
   x: number;

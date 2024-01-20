@@ -21,6 +21,8 @@ const GraficoPersonalizado: React.FC = () => {
 
   const [cor, setCor] = useState<string>('black');
 
+  const [corBack, setCorBack] = useState('white');
+
   const gerarDados = () => {
     try {
       const evaluate = math.compile(funcao);
@@ -99,10 +101,16 @@ const GraficoPersonalizado: React.FC = () => {
             <button onClick={aumentar}>AUMENTAR</button>
             <h3>Cor:</h3>
             <input type="color" name="" id="" value={cor} onChange={(e) => setCor(e.target.value)} />
+            <h3>Background: </h3>
+            <input type="color" name="" id="" value={corBack} onChange={(e) => setCorBack(e.target.value)}/>
           </div>
           {mostrarGrafico && (
             <div className="grafico_victory">
-              <VictoryChart theme={VictoryTheme.material} padding={{ top: tamanho, bottom: tamanho, left: tamanho, right: tamanho }}>
+              <VictoryChart 
+                theme={VictoryTheme.material} 
+                padding={{ top: tamanho, bottom: tamanho, left: tamanho, right: tamanho }} 
+                style={{parent: {background: corBack}}}
+              >
                 <VictoryAxis />
                 <VictoryAxis dependentAxis />
                 <VictoryLine data={dados} style={{ data: { stroke: cor } }} />

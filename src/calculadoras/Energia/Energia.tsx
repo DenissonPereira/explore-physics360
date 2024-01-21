@@ -50,7 +50,7 @@ const Energia: React.FC<EnergiaProps> = ({sol, brasil}) => {
                         value={caloriasJoule}
                         onChange={handleChange_cj}
                         placeholder='Digite aqui...'
-                        className='input'
+                        className='input input_energia'
                         title='Calorias para Joules'
                     />
                 </div>

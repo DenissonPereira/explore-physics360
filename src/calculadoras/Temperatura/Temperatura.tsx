@@ -3,7 +3,12 @@ import { useState, ChangeEvent } from 'react'
 import './Temperatura.less'
 import './TemperaturaResponsivo.sass'
 
-const Temperatura = () => {
+interface TemperaturaProps {
+    sol:boolean;
+    brasil: boolean;
+}
+
+const Temperatura: React.FC<TemperaturaProps> = ({sol, brasil}) => {
 
     const [valorCelsiusKelvin, setValorCelsiusKelvin] = useState<string>('');
 
@@ -55,80 +60,92 @@ const Temperatura = () => {
 
   return (
     <div className='temperatura_principal'>
-        <h1>Temperatura</h1>
+        <h1>{brasil ? 'Temperatura' : 'Temperature'}</h1>
         <div className="temperaturas">
             <div className="celsius">
                 <h2>Celsius</h2>
                 <div className="inputs">
-                    <p>Para Kelvin:</p>
-                    <input 
-                        type="text" 
-                        value={valorCelsiusKelvin}
-                        onChange={handleChange_celsius_kelvin}
-                        className='input'
-                        placeholder='Digite aqui...'
-                        title='Celsius para Kelvin'
-                    />
+                    <p>{brasil ? 'Para Kelvin' : 'Convert to Kelvin'}</p>
+                    <div className={sol ? '' : 'mudar_input'}>
+                        <input
+                            type="text"
+                            value={valorCelsiusKelvin}
+                            onChange={handleChange_celsius_kelvin}
+                            className='input'
+                            placeholder='Digite aqui...'
+                            title='Celsius para Kelvin'
+                        />
+                    </div>
                     <p className='resultado'>{C_K.toPrecision(5)} K.</p>
-                    <p>Para Fahrenheit:</p>
-                    <input 
-                        type="text" 
-                        value={valorCelsiusFahrenheit}
-                        onChange={handleChange_celsius_fahrenheit}
-                        className='input'
-                        placeholder='Digite aqui...'
-                        title='Celsius para Fahrenheit'
-                    />
+                    <p>{brasil ? 'Para Fahrenheit' : 'Convert to Fahrenheit'}</p>
+                    <div className={sol ? '' : 'mudar_input'}>
+                        <input
+                            type="text"
+                            value={valorCelsiusFahrenheit}
+                            onChange={handleChange_celsius_fahrenheit}
+                            className='input'
+                            placeholder='Digite aqui...'
+                            title='Celsius para Fahrenheit'
+                        />
+                    </div>
                     <p className='resultado'>{C_F.toPrecision(3)} &ordm;F.</p>
                 </div>
             </div>
             <div className="kelvin">
                 <h2>Kelvin</h2>
                 <div className="inputs">
-                    <p>Para Celsius:</p>
-                    <input 
-                        type="text" 
-                        value={valorKelvinCelsius}
-                        onChange={handleChange_kelvin_celsius}
-                        className='input'
-                        placeholder='Digite aqui...'
-                        title='Kelvin para Celsius'
-                    />
+                    <p>{brasil ? 'Para Celsius: ' : 'Convert to Celsius: '}</p>
+                    <div className={sol ? '' : 'mudar_input'}>
+                        <input
+                            type="text"
+                            value={valorKelvinCelsius}
+                            onChange={handleChange_kelvin_celsius}
+                            className='input'
+                            placeholder='Digite aqui...'
+                            title='Kelvin para Celsius'
+                        />
+                    </div>
                     <p className='resultado'>{K_C.toPrecision(4)} &ordm;C.</p>
-                    <p>Para Fahrenheit:</p>
-                    <input 
-                        type="text" 
-                        value={valorKelvinFahrenheit}
-                        onChange={handleChange_kelvin_Fahrenheit}
-                        className='input'
-                        placeholder='Digite aqui...'
-                        title='Kelvin para Fahrenheit'
-                    />
+                    <p>{brasil ? 'Para Fahrenheit: ' : 'Convert to Fahrenheit: '}</p>
+                    <div className={sol ? '' : 'mudar_input'}>
+                        <input
+                            type="text"
+                            value={valorKelvinFahrenheit}
+                            onChange={handleChange_kelvin_Fahrenheit}
+                            className='input'
+                            placeholder='Digite aqui...'
+                            title='Kelvin para Fahrenheit'
+                        />
+                    </div>
                     <p className='resultado'>{K_F.toPrecision(4)} &ordm;F.</p>
                 </div>
             </div>
             <div className="fahrenheit">
                 <h2>Fahrenheit</h2>
                 <div className="inputs">
-                    <p>Para Celsius</p>
-                    <input 
-                        type="text" 
-                        value={valorFahrenheitCelsius}
-                        onChange={handleChange_Fahrenheit_Celsius}
-                        className='input'
-                        placeholder='Digite aqui...'
-                        title='Fahrenheit para Celsius'
-                    />
+                    <p>{brasil ? 'Para Celsius: ' : 'Convert to Celsius: '}</p>
+                    <div className={sol ? '' : 'mudar_input'}>
+                        <input
+                            type="text"
+                            value={valorFahrenheitCelsius}
+                            onChange={handleChange_Fahrenheit_Celsius}
+                            className='input'
+                            placeholder='Digite aqui...'
+                            title='Fahrenheit para Celsius'
+                        />
+                    </div>
                     <p className='resultado'>{F_C.toPrecision(4)} &ordm;C.</p>
-                    <p>Para Kelvin</p>
-                    <input 
-                        type="text" 
-                        value={valorFahrenheitKelvin}
-                        onChange={handleChange_Fahrenheit_Kelvin}
-                        className='input'
-                        placeholder='Digite aqui...'
-                        title='Fahrenheit para Kelvin'
-                    />
+                    <p>{brasil ? 'Para Kelvin: ' : 'Convert to Kelvin: '}</p>
+                    <div className={sol ? '' : 'mudar_input'}>
+                        <input
+                            type="text"
+                            value={valorFahrenheitKelvin}
+                            onChange={handleChange_Fahrenheit_Kelvin}
+                            className='input'
+                            placeholder='Digite aqui...'
+                            title='Fahrenheit para Kelvin'
+                        />
+                    </div>
                     <p className='resultado'>{F_K.toPrecision(5)} K.</p>
                 </div>
             </div>

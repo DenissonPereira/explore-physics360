@@ -1,8 +1,13 @@
-import { ChangeEvent, useState } from 'react'
+import React, { ChangeEvent, useState } from 'react'
 import './Energia.less'
 import './EnergiaResponsivo.sass'
 
-const Energia = () => {
+interface EnergiaProps {
+    sol: boolean;
+    brasil: boolean;
+}
+
+const Energia: React.FC<EnergiaProps> = ({sol, brasil}) => {
 
     const [jouleCalorias, setJouleCalorias] = useState<string>('');
 
@@ -22,29 +27,33 @@ const Energia = () => {
 
   return (
     <div className='energia_principal'>
-        <h1>Energia</h1>
+        <h1>{brasil ? 'Energia' : 'Energy'}</h1>
         <div className="energia2">
-            <h2>Joule e Calorias</h2>
+            <h2>{brasil ? 'Joule e Calorias' : 'Joule and Calories'}</h2>
             <div className="energia">
                 <p>J:</p>
-                <input
-                    type="text"
-                    value={jouleCalorias}
-                    onChange={handleChange_jc}
-                    placeholder='Digite aqui...'
-                    className='input'
-                    title='Joules para Calorias'
-                />
+                <div className={sol ? '' : 'mudar_input'}>
+                    <input
+                        type="text"
+                        value={jouleCalorias}
+                        onChange={handleChange_jc}
+                        placeholder='Digite aqui...'
+                        className='input'
+                        title='Joules para Calorias'
+                    />
+                </div>
                 <p className='resultado'>{J_C.toPrecision(5)} cal.</p>
                 <p>cal:</p>
-                <input
-                    type="text"
-                    value={caloriasJoule}
-                    onChange={handleChange_cj}
-                    placeholder='Digite aqui...'
-                    className='input'
-                    title='Calorias para Joules'
-                />
+                <div className={sol ? '' : 'mudar_input'}>
+                    <input
+                        type="text"
+                        value={caloriasJoule}
+                        onChange={handleChange_cj}
+                        placeholder='Digite aqui...'
+                        className='input'
+                        title='Calorias para Joules'
+                    />
+                </div>
                 <p className='resultado'>{C_J.toPrecision(5)} J.</p>
             </div>
         </div>

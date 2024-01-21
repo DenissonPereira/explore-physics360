@@ -1,0 +1,35 @@
+.mudar_input {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: blur(.00001px);
+    height: 2em;
+}
+
+.mudar_input::before, .mudar_input::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + .2em);
+    height: calc(100% + .2em);
+    background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000, #ffff00, #00ff00, #0099ff, #001aff, #a200ff);
+    background-size: 300%;
+    border-radius: .2em;
+    animation: AnimarBorda 8s linear infinite;
+}
+
+@keyframes AnimarBorda {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 300%;
+    }
+}
+
+.mudar_input input {
+    width: 10em;
+    height: 2em;
+    outline: none;
+}

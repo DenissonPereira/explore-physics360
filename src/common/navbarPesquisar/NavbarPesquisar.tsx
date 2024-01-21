@@ -72,7 +72,7 @@ function NavbarPesquisar() {
                             value={key}
                             onChange={(e) => setKey(e.target.value)}
                         />
-                        <Button variant="outline-success" onClick={pesquisar}>Search</Button>
+                        <Button variant="outline-danger" onClick={pesquisar}>Search</Button>
                     </Form>
                 </Navbar.Collapse>
             </Container>

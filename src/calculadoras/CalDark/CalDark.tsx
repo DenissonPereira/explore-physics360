@@ -186,13 +186,13 @@ const CalDark = () => {
 
     return (
         <div className="calculadora_principal_black">
-            <div className="calc">
-                <div className="display">
-                    <div className="tela_numeros">
+            <div className="calc_black">
+                <div className="display_black">
+                    <div className="tela_numeros_black">
                         {numero}
                     </div>
                 </div>
-                <div className="teclas">
+                <div className="teclas_black">
                     <div className="linha1">
                         <button id="1" onClick={CE} ref={meuBotaoCeRef}>CE</button>
                         <button id="1" onClick={raiz}>&radic;</button>

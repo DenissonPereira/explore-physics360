@@ -21,13 +21,13 @@ const Calculadora = () => {
   const [brasil] = useState('');
   const [backgroundColor, setBackgroundColor] = useState('#ffffff');
 
+
   const mudarIdioma = () => {
 
   };
 
   const mudarTema = () => {
     if (backgroundColor === '#ffffff') {
-      document.body.style.backgroundColor = '#151320';
       setBackgroundColor('#151320');
       setSol(false);
       setTema('Mudar para tema claro');
@@ -35,13 +35,12 @@ const Calculadora = () => {
       setBackgroundColor('#ffffff');
       setSol(true);
       setTema('Mudar para tema escuro');
-      document.body.style.backgroundColor = '#ffffff';
     }
 
   };
 
   return (
-    <div  className="principal_calculadora">
+    <div  className="principal_calculadora" style={{backgroundColor}}>
         <div className="nav_calculadora">
           <NavbarPesquisar />
           <button onClick={mudarIdioma} className="botao_calculadora">

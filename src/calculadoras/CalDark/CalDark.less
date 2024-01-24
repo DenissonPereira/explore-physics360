@@ -1,18 +1,21 @@
-.calc {
+.calc_black {
     position: relative;
-    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 3px;
+    justify-items: center;
+    align-content: center;
+    filter: blur(0px);
+    width: 16em;
+    height: 20em;
 }
 
-.calc::before, .calc::after {
+.calc_black::before, .calc_black::after {
     content: '';
     position: absolute;
     z-index: -1;
-    width: calc(100% + 30px);
-    height: calc(100% + 30px);
+    width: calc(100%);
+    height: calc(100%);
     background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000, #ffff00, #00ff00, #0099ff, #001aff, #a200ff);
     background-size: 300%;
     border-radius: 8px;
@@ -28,6 +31,28 @@
     }
 }
 
-.calc::after {
+.calc_black::after {
     filter: blur(50px);
+}
+
+.teclas_black {
+    background-color: #121c24 ;
+    width: 15em;
+    display: flex;
+    align-items: center;
+}
+
+.display_black {
+    background-color: #121c24;
+    color: white;
+    width: 15em;
+    display: flex;
+    justify-content: start;
+}
+
+.tela_numeros_black {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
 }

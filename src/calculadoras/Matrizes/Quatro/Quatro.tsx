@@ -1,7 +1,11 @@
-import { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import './Quatro.sass';
 
-const Quatro = () => {
+interface QuatroProps {
+    sol: boolean;
+}
+
+const Quatro: React.FC<QuatroProps> = ({sol}) => {
     const [valor_a, setValor_a] = useState<string>('');
     const [valor_b, setValor_b] = useState<string>('');
     const [valor_c, setValor_c] = useState<string>('');
@@ -119,156 +123,158 @@ const Quatro = () => {
             <div className="matrizes_quatro_principal">
                 <h1>Determinante de uma matriz 4x4</h1>
                 <div className="matriz_quatro">
-                    <div className="quatro_linha_1">
-                        <div className="quatro_a">
-                            <input
-                                type="text"
-                                placeholder='a'
-                                title='Digite o valor de a'
-                                value={valor_a}
-                                onChange={handleChange_a}
-                            />
+                    <div className={sol ? '' : 'matrix2_2'}>
+                        <div className="quatro_linha_1">
+                            <div className="quatro_a">
+                                <input
+                                    type="text"
+                                    placeholder='a'
+                                    title='Digite o valor de a'
+                                    value={valor_a}
+                                    onChange={handleChange_a}
+                                />
+                            </div>
+                            <div className="quatro_b">
+                                <input
+                                    type="text"
+                                    placeholder='b'
+                                    title='Digite o valor de b'
+                                    value={valor_b}
+                                    onChange={handleChange_b}
+                                />
+                            </div>
+                            <div className="quatro_c">
+                                <input
+                                    type="text"
+                                    placeholder='c'
+                                    title='Digite o valor de c'
+                                    value={valor_c}
+                                    onChange={handleChange_c}
+                                />
+                            </div>
+                            <div className="quatro_d">
+                                <input
+                                    type="text"
+                                    placeholder='d'
+                                    title='Digite o valor de d'
+                                    value={valor_d}
+                                    onChange={handleChange_d}
+                                />
+                            </div>
                         </div>
-                        <div className="quatro_b">
-                            <input
-                                type="text"
-                                placeholder='b'
-                                title='Digite o valor de b'
-                                value={valor_b}
-                                onChange={handleChange_b}
-                            />
+                        <div className="quatro_linha_2">
+                            <div className="quatro_e">
+                                <input
+                                    type="text"
+                                    placeholder='e'
+                                    title='Digite o valor de e'
+                                    value={valor_e}
+                                    onChange={handleChange_e}
+                                />
+                            </div>
+                            <div className="quatro_f">
+                                <input
+                                    type="text"
+                                    placeholder='f'
+                                    title='Digite o valor de f'
+                                    value={valor_f}
+                                    onChange={handleChange_f}
+                                />
+                            </div>
+                            <div className="quatro_g">
+                                <input
+                                    type="text"
+                                    placeholder='g'
+                                    title='Digite o valor de g'
+                                    value={valor_g}
+                                    onChange={handleChange_g}
+                                />
+                            </div>
+                            <div className="quatro_h">
+                                <input
+                                    type="text"
+                                    placeholder='h'
+                                    title='Digite o valor de h'
+                                    value={valor_h}
+                                    onChange={handleChange_h}
+                                />
+                            </div>
                         </div>
-                        <div className="quatro_c">
-                            <input
-                                type="text"
-                                placeholder='c'
-                                title='Digite o valor de c'
-                                value={valor_c}
-                                onChange={handleChange_c}
-                            />
+                        <div className="quatro_linha_3">
+                            <div className="quatro_i">
+                                <input
+                                    type="text"
+                                    placeholder='i'
+                                    title='Digite o valor de i'
+                                    value={valor_i}
+                                    onChange={handleChange_i}
+                                />
+                            </div>
+                            <div className="quatro_j">
+                                <input
+                                    type="text"
+                                    placeholder='j'
+                                    title='Digite o valor de j'
+                                    value={valor_j}
+                                    onChange={handleChange_j}
+                                />
+                            </div>
+                            <div className="quatro_k">
+                                <input
+                                    type="text"
+                                    placeholder='k'
+                                    title='Digite o valor de k'
+                                    value={valor_k}
+                                    onChange={handleChange_k}
+                                />
+                            </div>
+                            <div className="quatro_l">
+                                <input
+                                    type="text"
+                                    placeholder='l'
+                                    title='Digite o valor de l'
+                                    value={valor_l}
+                                    onChange={handleChange_l}
+                                />
+                            </div>
                         </div>
-                        <div className="quatro_d">
-                            <input
-                                type="text"
-                                placeholder='d'
-                                title='Digite o valor de d'
-                                value={valor_d}
-                                onChange={handleChange_d}
-                            />
-                        </div>
-                    </div>
-                    <div className="quatro_linha_2">
-                        <div className="quatro_e">
-                            <input
-                                type="text"
-                                placeholder='e'
-                                title='Digite o valor de e'
-                                value={valor_e}
-                                onChange={handleChange_e}
-                            />
-                        </div>
-                        <div className="quatro_f">
-                            <input
-                                type="text"
-                                placeholder='f'
-                                title='Digite o valor de f'
-                                value={valor_f}
-                                onChange={handleChange_f}
-                            />
-                        </div>
-                        <div className="quatro_g">
-                            <input
-                                type="text"
-                                placeholder='g'
-                                title='Digite o valor de g'
-                                value={valor_g}
-                                onChange={handleChange_g}
-                            />
-                        </div>
-                        <div className="quatro_h">
-                            <input
-                                type="text"
-                                placeholder='h'
-                                title='Digite o valor de h'
-                                value={valor_h}
-                                onChange={handleChange_h}
-                            />
-                        </div>
-                    </div>
-                    <div className="quatro_linha_3">
-                        <div className="quatro_i">
-                            <input
-                                type="text"
-                                placeholder='i'
-                                title='Digite o valor de i'
-                                value={valor_i}
-                                onChange={handleChange_i}
-                            />
-                        </div>
-                        <div className="quatro_j">
-                            <input
-                                type="text"
-                                placeholder='j'
-                                title='Digite o valor de j'
-                                value={valor_j}
-                                onChange={handleChange_j}
-                            />
-                        </div>
-                        <div className="quatro_k">
-                            <input
-                                type="text"
-                                placeholder='k'
-                                title='Digite o valor de k'
-                                value={valor_k}
-                                onChange={handleChange_k}
-                            />
-                        </div>
-                        <div className="quatro_l">
-                            <input
-                                type="text"
-                                placeholder='l'
-                                title='Digite o valor de l'
-                                value={valor_l}
-                                onChange={handleChange_l}
-                            />
-                        </div>
-                    </div>
-                    <div className="quatro_linha_4">
-                        <div className="quatro_m">
-                            <input
-                                type="text"
-                                placeholder='m'
-                                title='Digite o valor de m'
-                                value={valor_m}
-                                onChange={handleChange_m}
-                            />
-                        </div>
-                        <div className="quatro_n">
-                            <input
-                                type="text"
-                                placeholder='n'
-                                title='Digite o valor de n'
-                                value={valor_n}
-                                onChange={handleChange_n}
-                            />
-                        </div>
-                        <div className="quatro_o">
-                            <input
-                                type="text"
-                                placeholder='o'
-                                title='Digite o valor de o'
-                                value={valor_o}
-                                onChange={handleChange_o}
-                            />
-                        </div>
-                        <div className="quatro_p">
-                            <input
-                                type="text"
-                                placeholder='p'
-                                title='Digite o valor de p'
-                                value={valor_p}
-                                onChange={handleChange_p}
-                            />
+                        <div className="quatro_linha_4">
+                            <div className="quatro_m">
+                                <input
+                                    type="text"
+                                    placeholder='m'
+                                    title='Digite o valor de m'
+                                    value={valor_m}
+                                    onChange={handleChange_m}
+                                />
+                            </div>
+                            <div className="quatro_n">
+                                <input
+                                    type="text"
+                                    placeholder='n'
+                                    title='Digite o valor de n'
+                                    value={valor_n}
+                                    onChange={handleChange_n}
+                                />
+                            </div>
+                            <div className="quatro_o">
+                                <input
+                                    type="text"
+                                    placeholder='o'
+                                    title='Digite o valor de o'
+                                    value={valor_o}
+                                    onChange={handleChange_o}
+                                />
+                            </div>
+                            <div className="quatro_p">
+                                <input
+                                    type="text"
+                                    placeholder='p'
+                                    title='Digite o valor de p'
+                                    value={valor_p}
+                                    onChange={handleChange_p}
+                                />
+                            </div>
                         </div>
                     </div>
                     <div className="valor_matriz_quatro">

@@ -1,22 +1,23 @@
-.mudar_input {
+.matrix2_2 {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     filter: blur(0px);
-    height: 2em;
+    gap: .2em;
 }
 
-.mudar_input::before, .mudar_input::after {
+.matrix2_2::before, .matrix2_2::after {
     content: '';
     position: absolute;
     z-index: -1;
-    width: calc(100% + .2em);
-    height: calc(100% + .2em);
+    width: calc(100% + .4em);
+    height: calc(100% + .4em);
     background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000, #ffff00, #00ff00, #0099ff, #001aff, #a200ff);
     background-size: 300%;
-    border-radius: .2em;
-    animation: AnimarBorda 8s linear infinite;
+    border-radius: 4px;
+    animation: AnimarBorda 8s linear infinite;    
 }
 
 @keyframes AnimarBorda {
@@ -28,12 +29,10 @@
     }
 }
 
-.mudar_input input {
-    width: 10em;
-    height: 2em;
-    outline: none;
+.matrix2_2::after {
+    filter: blur(50px);
 }
 
-.mudar_input::after {
-    filter: blur(10px);
+.matrix2_2 input {
+    background-color: #151320
 }

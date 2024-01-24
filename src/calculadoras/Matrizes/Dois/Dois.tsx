@@ -1,7 +1,13 @@
-import { ChangeEvent, useState } from 'react'
-import './Dois.sass'
+import React, { ChangeEvent, useState } from 'react'
 
-const Dois = () => {
+import './Dois.sass'
+import './DoisLed.less'
+
+interface DoisProps {
+    sol: boolean;
+}
+
+const Dois: React.FC<DoisProps> = ({sol}) => {
 
     const [a, setA] = useState<string>('');
 
@@ -38,44 +44,46 @@ const Dois = () => {
         <div>
             <div className="matrizes_principais">
                 <h1>Determinante de uma matriz 2x2</h1>
-                <div className="matrizes_linha_1">
-                    <div className="elemento_a">
-                        <input
-                            type="text"
-                            value={a}
-                            onChange={handleChange_a}
-                            placeholder='a'
-                            title='Digite o valor de a'
-                        />
+                <div className={sol ? '' : 'matrix2_2'}>
+                    <div className="matrizes_linha_1">
+                        <div className="elemento_a">
+                            <input
+                                type="text"
+                                value={a}
+                                onChange={handleChange_a}
+                                placeholder='a'
+                                title='Digite o valor de a'
+                            />
+                        </div>
+                        <div className="elemento_b">
+                            <input
+                                type="text"
+                                value={b}
+                                onChange={handleChange_b}
+                                placeholder='b'
+                                title='Digite o valor de b'
+                            />
+                        </div>
                     </div>
-                    <div className="elemento_b">
-                        <input
-                            type="text"
-                            value={b}
-                            onChange={handleChange_b}
-                            placeholder='b'
-                            title='Digite o valor de b'
-                        />
-                    </div>
-                </div>
-                <div className="matrizes_linha_2">
-                    <div className="elemento_C">
-                        <input
-                            type="text"
-                            value={c}
-                            onChange={handleChange_c}
-                            placeholder='c'
-                            title='Digite o valor de c'
-                        />
-                    </div>
-                    <div className="elemento_d">
-                        <input
-                            type="text"
-                            value={d}
-                            onChange={handleChange_d}
-                            placeholder='d'
-                            title='Digite o valor de d'
-                        />
+                    <div className="matrizes_linha_2">
+                        <div className="elemento_C">
+                            <input
+                                type="text"
+                                value={c}
+                                onChange={handleChange_c}
+                                placeholder='c'
+                                title='Digite o valor de c'
+                            />
+                        </div>
+                        <div className="elemento_d">
+                            <input
+                                type="text"
+                                value={d}
+                                onChange={handleChange_d}
+                                placeholder='d'
+                                title='Digite o valor de d'
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

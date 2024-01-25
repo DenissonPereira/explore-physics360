@@ -6,6 +6,7 @@ import { TbMathIntegrals } from "react-icons/tb"
 
 import './ExploreBlack.sass'
 import './ExploreBlackResponsivo.sass'
+import './ExploreBlack.less'
 
 const ExploreBlack = () => {
 
@@ -18,20 +19,30 @@ const ExploreBlack = () => {
       <div className='explore_caixa'>
         <h1>{titulo}</h1>
         <div className="cartoes_explorar">
-          <div className="cartoes1">
-            <TbMath />
+          <div className="cartoes1_black">
+            <div className="cartao_1_black">
+              <TbMath />
+            </div>
           </div>
-          <div className="cartoes2">
-            <TbMathMax />
+          <div className="cartoes2_black">
+            <div className="cartao_2_black">
+              <TbMathMax />
+            </div>
           </div>
-          <div className="cartoes3">
-            <FaCalculator />
+          <div className="cartoes3_black">
+            <div className="cartao_3_black">
+              <FaCalculator />
+            </div>
           </div>
-          <div className="cartoes4">
-            <PiSigmaThin />
+          <div className="cartoes2_black">
+            <div className="cartao_2_black">
+              <PiSigmaThin />
+            </div>
           </div>
-          <div className="cartoes5">
-            <TbMathIntegrals />
+          <div className="cartoes1_black">
+            <div className="cartao_1_black">
+              <TbMathIntegrals />
+            </div>
           </div>
         </div>
         <div className="calculadoras_explorar">

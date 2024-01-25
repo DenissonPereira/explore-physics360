@@ -1,0 +1,98 @@
+.cartoes3_black {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    filter: blur(0px);
+}
+
+.cartoes3_black::before, .cartoes3_black::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 1px);
+    height: calc(100% + 1px);
+    background: linear-gradient(45deg, #6a00a3, #001aff, #a200ff, #6a00a3, #ff0055, #ff0000,#6a00a3, #001aff, #a200ff, #6a00a3);
+    background-size: 300%;
+    border-radius: 4px;
+    animation: AnimarBorda 7s linear infinite;    
+}
+
+@keyframes AnimarBorda {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 300%;
+    }
+}
+
+.cartoes3_black::after {
+    filter: blur(50px);
+}
+
+.cartao_3_black {
+    background-color: black;
+    width: 6.5em;
+    height: 6.5em;
+}
+
+.cartoes2_black {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    filter: blur(0px);
+}
+
+.cartoes2_black::before, .cartoes2_black::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 1px);
+    height: calc(100% + 1px);
+    background: linear-gradient(45deg, #00ff00, #33cc33, #66cc66, #99cc99, #00ff00, #75d4bd, #21c5d1, #3394cc, #0a55b6, #3394cc,  #21c5d1, #00ff00);
+    background-size: 300%;
+    border-radius: 4px;
+    animation: AnimarBorda 7s linear infinite; 
+}
+
+.cartao_2_black{
+    background-color: black;
+    width: 5.5em;
+    height: 5.5em;
+}
+
+.cartoes2_black::after {
+    filter: blur(50px);
+}
+
+.cartoes1_black {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    filter: blur(0px);
+}
+
+.cartoes1_black::before, .cartoes1_black::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 1px);
+    height: calc(100% + 1px);
+    background: linear-gradient(45deg, #FFA500, #FF8C00, #FF6347, #FF4500, #FF6347, #FF8C00, #FFA500, #FF8C00, #FF6347, #FF4500);
+    background-size: 300%;
+    border-radius: 4px;
+    animation: AnimarBorda 7s linear infinite; 
+}
+
+.cartao_1_black{
+    background-color: black;
+    width: 4.5em;
+    height: 4.5em;
+}
+
+.cartoes1_black::after {
+    filter: blur(50px);
+}

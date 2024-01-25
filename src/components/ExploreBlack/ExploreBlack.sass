@@ -21,7 +21,7 @@
     margin-bottom: 4em
 
 
-.cartoes1
+.cartoes1_black
     @include mixins.remover_margens 
     width: 5em
     height: 5em
@@ -36,6 +36,7 @@
         transition: .5s
         width: 6em
         height: 6em
+        color: orange
     svg
         font-size: 4em
         margin-top: .1em
@@ -59,7 +60,7 @@
         font-size: 4em
         margin-top: .1em
 
-.cartoes2
+.cartoes2_black
     @include mixins.remover_margens 
     width: 6em
     height: 6em
@@ -74,6 +75,7 @@
         transition: .5s
         width: 7em
         height: 7em
+        color: green
     svg
         font-size: 4em
         margin-top: .2em
@@ -97,12 +99,19 @@
         font-size: 4em
         margin-top: .2em
 
-.cartoes3
+.cartoes3_black
     width: 7em
     height: 7em
-    background-color: variables.$cor-azul-texto
+    background-color: black
     border-radius: .5em
     cursor: pointer
+    &:hover
+        background-color: variables.$cor-azul-texto2
+        border: none
+        transition: .5s
+        width: 8em
+        height: 8em
+        color: red
     svg
         font-size: 4em
         margin-top: .3em
